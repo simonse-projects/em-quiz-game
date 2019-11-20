@@ -1,9 +1,11 @@
+Drop TABLE CaseHead;
+
 CREATE TABLE CaseHead(
 	CaseNumber  INTEGER PRIMARY KEY,
-	PatientName TEXT NOT NULL,
+	PatientName TEXT Not Null,
 	ChiefComplaint TEXT NOT NULL,
 	ScenarioDeveloper TEXT NOT NULL,
-	LastRevDate TEXT,
+    LastRevDate TEXT,
 	DateDeveloped TEXT,
 	Version REAL,
 	Affiliations TEXT NOT NULL,
@@ -43,11 +45,6 @@ CREATE TABLE CaseHead(
 	PEGenitourinary TEXT,
 	PESkin TEXT,
 	PENeurologic TEXT,
-	PEBehavioral TEXT,
-	
+	PEBehavioral TEXT
 );
 
-
-
-	
-	
