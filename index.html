@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link href='css/styles.css' rel='stylesheet' />
+
     <title>Em Quiz Game</title>
   </head>
   <body>
@@ -44,26 +46,28 @@
         </div>
       </div>
     </div>
-    <div class="col-12" id="page-three">
+    <div class="container-fluid" id="page-three">
       <h2 id="patient-name">Patient Name: </h2>
-      <div class="col-6">
-        Box
-      </div>
-      <div class="col-6">
-        <div class="col-6">
-          Vitals
+      <div class="row">
+        <div class="col-6 border">
+          Box
         </div>
         <div class="col-6">
-          History of Present Illness
-        </div>
-        <div class="col-6">
-          Tx/feedback
-        </div>
-        <div class="col-6">
-          Labs/Imaging
-        </div>
-        <div class="col-6">
-          Differential Diagnosis
+          <div class="col-6 border">
+            Vitals
+          </div>
+          <div class="col-6 border overflow-auto" id="HPI">
+            History of Present Illness:
+          </div>
+          <div class="col-6 border">
+            Tx/feedback
+          </div>
+          <div class="col-6 border">
+            Labs/Imaging
+          </div>
+          <div class="col-6 border">
+            Differential Diagnosis
+          </div>
         </div>
       </div>
     </div>

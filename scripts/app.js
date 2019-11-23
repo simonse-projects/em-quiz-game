@@ -45,8 +45,10 @@
 
   } //end displayCases
 
-function showCase(details) {
-  $("#patient-name").append(details["PatientName"])
-}
+  function showCase(details) {
+    $("#patient-name").append(details["PatientName"]);
+    console.log(details["History1"] + details["History2"]);
+    $("#HPI").append(details["History1"] + details["History2"]);
+  }
 
 })();
