@@ -3,18 +3,23 @@
   $("#page-three").hide();
   // $("#page-one").hide();
 
-  Papa.parse("data/CaseDatawHeaders.csv", {
-    header: true,
-    delimiter: ",",
-    complete: function(results) {
-      console.log("Finished");
-      displayCases(results);
-    }
+  $.getJSON("data/case-desc.json", function(casesJson) {
+    displayCases(casesJson);
   })
+  .fail(function (error) {
+    console.log("Error loading data");
+  });
 
 
   function displayCases(cases) {
-    console.log(cases);
+
+    $("#case-selection").empty();
+    $.each(cases, function (index, value) {
+      $("#case-selection").append("<option>"+
+          value["PatientName"]+" - "+value["ChiefComplaint"]+
+          "</option>");
+    });
+
   }
 
 })();
