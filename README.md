@@ -6,8 +6,8 @@ It is designed for use by med students but anyone can test their medical diagnos
 
 This project repo is for a website version of the game.
 
-Contact Info:
-    Designer:  PT Simonse    ptsimonse@gmail.com
-    Coder1:  Jimmy Simonse    jsimonse9@gmail.com
-    Coder2:  Courtney Simonse
+Contact Info:  
+  &ensp; Designer:  PT Simonse    ptsimonse@gmail.com  
+  &ensp; Coder1:  Jimmy Simonse    jsimonse9@gmail.com  
+  &ensp; Coder2:  Courtney Simonse
    
