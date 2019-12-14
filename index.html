@@ -5,9 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
     <link href='css/styles.css' rel='stylesheet' />
 
     <title>Em Quiz Game</title>
@@ -20,13 +19,14 @@
       <div class="card-body">
         <h3 class="card-title">Clinical Trainer</h3>
         <p class="card-text"></p>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#case-list">
+        <button type="button" class="button-primary" data-toggle="modal" data-target="#case-list">
           Choose Case
         </button>
         <p class="card-text">Disclaimer: learning tool does not substitute for clinical judgement, etc.</p>
       </div>
     </div>
-    <div class="modal fade" id="case-list" tabindex="-1" role="dialog">
+
+    <div class="modal" id="case-list" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -41,31 +41,32 @@
               </select>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary" id="select-btn">Select</button>
+              <button type="button" class="button-primary" id="select-btn">Select</button>
             </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid" id="page-three">
+
+    <div class="container" id="page-three">
       <h2 id="patient-name">Patient Name: </h2>
       <div class="row">
-        <div class="col-6 border">
+        <div class="six columns border">
           Box
         </div>
-        <div class="col-6">
-          <div class="col-6 border">
+        <div class="six columns">
+          <div class="six columns border">
             Vitals
           </div>
-          <div class="col-6 border overflow-auto" id="HPI">
+          <div class="six columns border overflow-auto" id="HPI">
             History of Present Illness:
           </div>
-          <div class="col-6 border">
+          <div class="six columns border">
             Tx/feedback
           </div>
-          <div class="col-6 border">
+          <div class="six columns border">
             Labs/Imaging
           </div>
-          <div class="col-6 border">
+          <div class="six columns border">
             Differential Diagnosis
           </div>
         </div>

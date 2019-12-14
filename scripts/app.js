@@ -41,8 +41,8 @@
       });
 
       // hide case selection area and show case details
-      $("#page-one").hide();
-      $("#page-three").show();
+      page1.style.display = 'none';
+      page3.style.display = 'block';
 
       // build case details page
       showCase(caseDetails);
