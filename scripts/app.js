@@ -22,8 +22,8 @@
     // loop through cases to build list
     $.each(cases, function (index, value) {
       $("#case-selection").append("<option value="+value["CaseNumber"]+">"+
-          value["PatientName"]+" - "+value["ChiefComplaint"]+
-          "</option>");
+          value["PatientName"]+" - "+value["Age"]+value["Gender"]+" - "+
+          value["ChiefComplaint"]+"</option>");
     });
 
     // button selects case

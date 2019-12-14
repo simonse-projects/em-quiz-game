@@ -36,10 +36,32 @@
  cursor: pointer;
 }
 
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+/* .border {
+  outline: thin solid;
+  margin: 3px;
+  padding: 3px;
+} */
+
 #page-three {
   display: none;
 }
 
 #HPI {
-  height: 50%;
+  overflow-y: scroll;
+  height: 200px;
+}
+
+#ROS {
+  overflow-y: scroll;
+  height: 100px;
 }

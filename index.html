@@ -47,28 +47,47 @@
       </div>
     </div>
 
-    <div class="container" id="page-three">
+    <div class="container u-full-width" id="page-three">
       <h2 id="patient-name">Patient Name: </h2>
       <div class="row">
-        <div class="six columns border">
-          Box
+        <div class="nine columns">
+          <div class="six columns border overflow-auto">
+            <h5>History of Present Illness:</h5>
+            <div id="HPI"></div>
+            <hr>
+            <h5>ROS</h5>
+            <div id="ROS"></div>
+            <hr>
+          </div>
+          <div class="six columns border">
+            <h5>Vitals</h5>
+            <hr>
+            <h5>PE</h5>
+            <h5>Labs</h5>
+            <h5>Imaging</h5>
+          </div>
+          <div class="nine columns">
+            <h5>ED Course</h5>
+            <h5>MDM</h5>
+            <pre id="MDM"><code>[summary statement]</code></pre>
+          </div>
         </div>
-        <div class="six columns">
-          <div class="six columns border">
-            Vitals
-          </div>
-          <div class="six columns border overflow-auto" id="HPI">
-            History of Present Illness:
-          </div>
-          <div class="six columns border">
-            Tx/feedback
-          </div>
-          <div class="six columns border">
-            Labs/Imaging
-          </div>
-          <div class="six columns border">
-            Differential Diagnosis
-          </div>
+        <div class="three columns border">
+          <section id="pictures">
+            <h5>Pictures</h5>
+          </section>
+          <hr>
+          <section id="DDx">
+            <h5>DDx</h5>
+          </section>
+          <section class="u-max-full-width" id="menu">
+            <button type="button" class="button-primary" id="patient-enc">Patient Encounter</button>
+            <button type="button" class="button-primary" id="diff-diagnosis">Differential Diagnosis</button>
+            <button type="button" class="button-primary" id="labs">Labs</button>
+            <button type="button" class="button-primary" id="imaging">Imaging</button>
+            <button type="button" class="button-primary" id="treatment">Treatment</button>
+            <button type="button" class="button-primary" id="disposition">Disposition</button>
+          </section>
         </div>
       </div>
     </div>
