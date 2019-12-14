@@ -1,7 +1,12 @@
 (function () {
+
+  page1 = document.getElementById('page-one');
+  page2 = document.getElementById('page-two');
+  page3 = document.getElementById('page-three');
+
   // hide patient info screen to start
-  $("#page-three").hide();
-  // $("#page-one").hide();
+  page3.style.display = 'none';
+  // page1.style.display = 'none';
 
   $.getJSON("data/case-desc.json", function(casesJson) {
     displayCases(casesJson);
