@@ -52,8 +52,19 @@
 
   function showCase(details) {
     $("#patient-name").append(details["PatientName"]);
-    console.log(details["History1"] + details["History2"]);
+    // console.log(details["History1"] + details["History2"]);
     $("#HPI").append(details["History1"] + details["History2"]);
+    var VSRhythm = document.getElementById("VSRhythm");
+    VSRhythm.innerHTML = "<img src='images/VRhythm_Afib.png' width=50%>"
+
+    // list of vitals
+    var vitalsList = ["VSPulse", "VSSBP", "VSDBP", "VSO2Sat", "VSTemperature", "VSRespiratoryRate"];
+    // loop over array to print on screen
+    vitalsList.forEach(function (item, index) {
+      var el = document.getElementById(item);
+      el.innerHTML = details[item];
+    });
+
   }
 
 })();

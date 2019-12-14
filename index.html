@@ -61,6 +61,14 @@
           </div>
           <div class="six columns border">
             <h5>Vitals</h5>
+            <section id="vitals">
+              <span id="VSRhythm"></span>
+              Pulse: <span id="VSPulse"></span><br>
+              BP: <span id="VSSBP"></span>/<span id="VSDBP"></span>
+              O2Sat: <span id="VSO2Sat"></span><br>
+              Temp: <span id="VSTemperature"></span>
+              Respiratory Rate: <span id="VSRespiratoryRate"></span>
+            </section>
             <hr>
             <h5>PE</h5>
             <h5>Labs</h5>
@@ -81,13 +89,29 @@
             <h5>DDx</h5>
           </section>
           <section class="u-max-full-width" id="menu">
-            <button type="button" class="button-primary" id="patient-enc">Patient Encounter</button>
+            <button type="button" class="button-primary" data-toggle="modal" data-target="#patient-enc">Patient Encounter</button>
             <button type="button" class="button-primary" id="diff-diagnosis">Differential Diagnosis</button>
             <button type="button" class="button-primary" id="labs">Labs</button>
             <button type="button" class="button-primary" id="imaging">Imaging</button>
             <button type="button" class="button-primary" id="treatment">Treatment</button>
             <button type="button" class="button-primary" id="disposition">Disposition</button>
           </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="patient-enc" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Patient Encounter</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+          </div>
         </div>
       </div>
     </div>
