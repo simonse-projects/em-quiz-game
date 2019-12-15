@@ -5,9 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
     <link href='css/styles.css' rel='stylesheet' />
 
     <title>Em Quiz Game</title>
@@ -20,13 +19,14 @@
       <div class="card-body">
         <h3 class="card-title">Clinical Trainer</h3>
         <p class="card-text"></p>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#case-list">
+        <button type="button" class="button-primary" data-toggle="modal" data-target="#case-list">
           Choose Case
         </button>
         <p class="card-text">Disclaimer: learning tool does not substitute for clinical judgement, etc.</p>
       </div>
     </div>
-    <div class="modal fade" id="case-list" tabindex="-1" role="dialog">
+
+    <div class="modal" id="case-list" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -41,32 +41,76 @@
               </select>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary" id="select-btn">Select</button>
+              <button type="button" class="button-primary" id="select-btn">Select</button>
             </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid" id="page-three">
+
+    <div class="container u-full-width" id="page-three">
       <h2 id="patient-name">Patient Name: </h2>
       <div class="row">
-        <div class="col-6 border">
-          Box
+        <div class="nine columns">
+          <div class="six columns border overflow-auto">
+            <h5>History of Present Illness:</h5>
+            <div id="HPI"></div>
+            <hr>
+            <h5>ROS</h5>
+            <div id="ROS"></div>
+            <hr>
+          </div>
+          <div class="six columns border">
+            <h5>Vitals</h5>
+            <section id="vitals">
+              <span id="VSRhythm"></span>
+              Pulse: <span id="VSPulse"></span><br>
+              BP: <span id="VSSBP"></span>/<span id="VSDBP"></span>
+              O2Sat: <span id="VSO2Sat"></span><br>
+              Temp: <span id="VSTemperature"></span>
+              Respiratory Rate: <span id="VSRespiratoryRate"></span>
+            </section>
+            <hr>
+            <h5>PE</h5>
+            <h5>Labs</h5>
+            <h5>Imaging</h5>
+          </div>
+          <div class="nine columns">
+            <h5>ED Course</h5>
+            <h5>MDM</h5>
+            <pre id="MDM"><code>[summary statement]</code></pre>
+          </div>
         </div>
-        <div class="col-6">
-          <div class="col-6 border">
-            Vitals
+        <div class="three columns border">
+          <section id="pictures">
+            <h5>Pictures</h5>
+          </section>
+          <hr>
+          <section id="DDx">
+            <h5>DDx</h5>
+          </section>
+          <section class="u-max-full-width" id="menu">
+            <button type="button" class="button-primary" data-toggle="modal" data-target="#patient-enc">Patient Encounter</button>
+            <button type="button" class="button-primary" id="diff-diagnosis">Differential Diagnosis</button>
+            <button type="button" class="button-primary" id="labs">Labs</button>
+            <button type="button" class="button-primary" id="imaging">Imaging</button>
+            <button type="button" class="button-primary" id="treatment">Treatment</button>
+            <button type="button" class="button-primary" id="disposition">Disposition</button>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="patient-enc" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Patient Encounter</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-          <div class="col-6 border overflow-auto" id="HPI">
-            History of Present Illness:
-          </div>
-          <div class="col-6 border">
-            Tx/feedback
-          </div>
-          <div class="col-6 border">
-            Labs/Imaging
-          </div>
-          <div class="col-6 border">
-            Differential Diagnosis
+          <div class="modal-body">
+            
           </div>
         </div>
       </div>
