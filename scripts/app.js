@@ -8,6 +8,24 @@
   page3.style.display = 'none';
   // page1.style.display = 'none';
 
+  // collapsible areas
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+
+
   $.getJSON("data/case-desc.json", function(casesJson) {
     displayCases(casesJson);
   })
@@ -65,6 +83,26 @@
       el.innerHTML = details[item];
     });
 
-  }
+    // patient encounter
+    var ROSList = ["ROSGeneral", "ROSHEENT", "ROSRespiratory", "ROSCardiovascular", "ROSGastrointestinal", "ROSGenitoruinary", "ROSMusculoskeletal", "ROSNeurologic", "ROSBehavioral", "ROSSkin"];
+    ROSList.forEach(function (item, index) {
+      var el = document.getElementById(item);
+      var elBtn = document.getElementById(item+"Btn");
+      elBtn.onclick = function() {
+        el.innerHTML = details[item];
+        el.style.display = "inline";
+        el.style["padding-left"] = "10px";
+      };
+    });
+    //
+    // var ROSGeneral = document.getElementById("ROSGeneral");
+    // var ROSGeneralBtn = document.getElementById("ROSGeneralBtn");
+    // ROSGeneralBtn.onclick = function() {
+    //   ROSGeneral.innerHTML = details["ROSGeneral"];
+    //   ROSGeneral.style.display = "inline";
+    //   ROSGeneral.style["padding-left"] = "10px";
+    // };
+
+  } //end showCase
 
 })();
