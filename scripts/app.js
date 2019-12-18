@@ -73,7 +73,7 @@
     // console.log(details["History1"] + details["History2"]);
     $("#HPI").append(details["History1"] + details["History2"]);
     var VSRhythm = document.getElementById("VSRhythm");
-    VSRhythm.innerHTML = "<img src='images/VRhythm_Afib.png' width=50%>"
+    VSRhythm.innerHTML = "<img src='images/VRhythm_NSR.png' width=50%>"
 
     // list of vitals
     var vitalsList = ["VSPulse", "VSSBP", "VSDBP", "VSO2Sat", "VSTemperature", "VSRespiratoryRate"];
@@ -89,7 +89,7 @@
       var el = document.getElementById(item);
       var elBtn = document.getElementById(item+"Btn");
       elBtn.onclick = function() {
-        el.innerHTML = details[item];
+        el.innerHTML = item+": "+details[item];
         el.style.display = "inline";
         el.style["padding-left"] = "10px";
       };
