@@ -81,6 +81,7 @@
     vitalsList.forEach(function (item, index) {
       var el = document.getElementById(item);
       el.innerHTML = details[item];
+
     });
 
     // patient encounter
@@ -88,20 +89,18 @@
     ROSList.forEach(function (item, index) {
       var el = document.getElementById(item);
       var elBtn = document.getElementById(item+"Btn");
+      // if (elBtn == null) {
+      //   console.log(item);
+      // }
       elBtn.onclick = function() {
         el.innerHTML = item+": "+details[item];
         el.style.display = "inline";
         el.style["padding-left"] = "10px";
+        var statement = document.createElement("div")
+        statement.innerHTML = item+": "+details[item];
+        document.getElementById('MDM').append(statement);
       };
     });
-    //
-    // var ROSGeneral = document.getElementById("ROSGeneral");
-    // var ROSGeneralBtn = document.getElementById("ROSGeneralBtn");
-    // ROSGeneralBtn.onclick = function() {
-    //   ROSGeneral.innerHTML = details["ROSGeneral"];
-    //   ROSGeneral.style.display = "inline";
-    //   ROSGeneral.style["padding-left"] = "10px";
-    // };
 
   } //end showCase
 
