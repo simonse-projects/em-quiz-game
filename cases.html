@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link href='css/styles.css' rel='stylesheet' />
+
+    <title>Em Quiz Game</title>
+  </head>
+  <body>
+    <div class="card" id="page-one">
+      <h1 class="card-header">
+        EM Quiz Game
+      </h1>
+      <div class="card-body">
+        <h3 class="card-title">Clinical Trainer</h3>
+        <p class="card-text"></p>
+        <button type="button" class="button-primary" data-toggle="modal" data-target="#case-list">
+          Choose Case
+        </button>
+        <h5>Case List</h5>
+        <button type="button" class="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div>
+          <p class="lead">Select a case below:<p>
+          <select class="form-control" id="case-selection">
+          </select>
+        </div>
+        <div class="">
+          <button type="button" class="button-primary" id="select-btn">Select</button>
+        </div>
+        <p class="card-text">Disclaimer: learning tool does not substitute for clinical judgement, etc.</p>
+      </div>
+    </div>
+
+    <div class="modal" id="case-list">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Case List</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+              <p class="lead">Select a case below:<p>
+              <select class="form-control" id="case-selection">
+              </select>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="button-primary" id="select-btn">Select</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
