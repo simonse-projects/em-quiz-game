@@ -102,6 +102,25 @@
       };
     });
 
+    // physical exam
+    var PEList = ["PEGeneralAppearance", "PEHEENT", "PENeck", "PECardiovascular", "PERespiratory", "PEMusculoskeletal", "PEGastrointestinal", "PEGenitourinary", "PESkin", "PENeurologic", "PEBehavioral"];
+    PEList.forEach(function (item, index) {
+      var el = document.getElementById(item);
+      var elBtn = document.getElementById(item+"Btn");
+      if (elBtn == null) {
+        console.log(item);
+        console.log(details[item]);
+      }
+      elBtn.onclick = function() {
+        el.innerHTML = item+": "+details[item];
+        el.style.display = "inline";
+        el.style["padding-left"] = "10px";
+        var statement = document.createElement("div")
+        statement.innerHTML = item+": "+details[item];
+        document.getElementById('MDM').append(statement);
+      };
+    });
+
   } //end showCase
 
 })();
