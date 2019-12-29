@@ -26,33 +26,33 @@
 
 
 
-  $.getJSON("data/case-desc.json", function(casesJson) {
+  d3.json("data/case-desc.json").then(function(casesJson) {
     displayCases(casesJson);
-  })
-  .fail(function (error) {
-    console.log("Error loading data");
   });
 
   function displayCases(cases) {
+    var caseSelection = document.getElementById("case-selection");
 
     // empty case list
-    $("#case-selection").empty();
+    // caseSelection.empty();
+    while(caseSelection.firstChild)
+      caseSelection.removeChild(caseSelection.firstChild);
     // loop through cases to build list
-    $.each(cases, function (index, value) {
-      $("#case-selection").append("<option value="+value["CaseNumber"]+">"+
+    cases.forEach(function (index, value) {
+      caseSelection.append("<option value="+value["CaseNumber"]+">"+
           value["PatientName"]+" - "+value["Age"]+value["Gender"]+" - "+
           value["ChiefComplaint"]+"</option>");
     });
 
     // button selects case
-    $("#select-btn").on("click", function (e) {
-      console.log($("#case-selection").children("option:selected").val());
-      $("#case-list").modal("hide");
+    document.getElementById("select-btn").addEventListener("click", function (e) {
+      console.log(caseSelection.children("option:selected").val());
+      document.getElementById("case-list").modal("hide");
 
       // select case with selected ID number
-      var caseNumber = $("#case-selection").children("option:selected").val();
+      var caseNumber = document.getElementById("case-selection").children("option:selected").val();
       var caseDetails = [];
-      $.each(cases, function (index, value) {
+      cases.forEach(function (index, value) {
         if (value["CaseNumber"] == caseNumber) {
           caseDetails = value;
         }
@@ -64,14 +64,14 @@
 
       // build case details page
       showCase(caseDetails);
-    });
+    }, false);
 
   } //end displayCases
 
   function showCase(details) {
-    $("#patient-name").append(details["PatientName"]);
+    document.getElementById("patient-name").append(details["PatientName"]);
     // console.log(details["History1"] + details["History2"]);
-    $("#HPI").append(details["History1"] + details["History2"]);
+    document.getElementById("HPI").append(details["History1"] +"<br>"+ details["History2"]);
     var VSRhythm = document.getElementById("VSRhythm");
     VSRhythm.innerHTML = "<img src='images/VRhythm_NSR.png' width=50%>"
 
@@ -107,10 +107,10 @@
     PEList.forEach(function (item, index) {
       var el = document.getElementById(item);
       var elBtn = document.getElementById(item+"Btn");
-      if (elBtn == null) {
-        console.log(item);
-        console.log(details[item]);
-      }
+      // if (elBtn == null) {
+      //   console.log(item);
+      //   console.log(details[item]);
+      // }
       elBtn.onclick = function() {
         el.innerHTML = item+": "+details[item];
         el.style.display = "inline";
