@@ -39,7 +39,7 @@ btn.onclick = function() {
   patientEncModal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
+// When the user clicks on (x), close the modal
 closeBtn.onclick = function() {
   patientEncModal.style.display = "none";
 }
@@ -73,7 +73,7 @@ function displayCases(cases) {
     caseListModal.style.display = "block";
   }
 
-  // When the user clicks on <span> (x), close the modal
+  // When the user clicks on (x), close the modal
   closeBtn.onclick = function() {
     console.log("click close");
     caseListModal.style.display = "none";

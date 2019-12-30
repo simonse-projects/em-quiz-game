@@ -1,117 +1,60 @@
-﻿Upper Abd Pain,Diffuse & Flank abd pain,Lower Abd/Pelvic pain,Upper GI bleed,Lower GI bleed,Vomiting,Vaginal bleeding,Urinary Tract Infection,Back Pain,Headache,Altered Mental Status,Weakness/Dizziness,Eye,Sore Throat,Cough,Shortness of Breath,Chest Pain,Arrhythmias/Tachycardia,Chest Trauma,Musculoskeletal,Leg Pain,Ankle & Foot Pain,Skin,Rash,Toxic Ingestion,Endocrine,Environmental Complaints,Bleeding/hematologic
-Acute Coronary Syndrome,Abdominal Aortic Aneurysm (AAA),Appendicitis,Gastric Ulcer,Diverticulosis,Small Bowel Obstruction (SBO),missed abortion,Cervicitis,Mechanical Back Pain,Trigeminal neuralgia,Alcohol Intoxication,anemia,"Orbital Blowout Fracture
-",Mononucleosis,Allergic rhinitis,Asthma,Acute Coronary Syndrome (ACS),Sinus tachycardia,Open Pneumothorax,Compartment Syndrome,ACL Tear,Achilles rupture,Abscess,DRESS,Anticholinergic Toxidrome,hyperglycemia,Hyperthermia,Epistaxis
-Myocardial Infarction,DKA,Hernia,Duodenal Ulcer,Meckel's Diverticulum,Uremia,threatened abortion,Trichomoniasis,Nephrolithiasis,Temporomandibular Joint Disease (TMJ disease),Alcohol Withdrawal,orthostatic hypotension,Globe Rupture,Epiglottitis,Asthma,COPD exacerbation,Pulmonary Embolism,atrial tachycardia,Flail Chest,Septic Arthritis,"MCL/PCL Tear
-",Calcaneus injury,Animal Bite,Microangiopathic Hemolytic Anemia,Cholinergic Poisoning,hyperkalemia,Hypothermia,Hematuria
-Fitz-Hugh-Curtis Syndrome,Mesenteric Ischemia,Diverticulitis,Gastritis,Angiodysplasia,Meningitis,"gynecologic malignancy
-",Bacterial Vaginosis,Epidural Abscess,Cluster Headache,Hepatic Encephalopathy,Meniere's,Conjunctivitis,"Foreign Body
-",COPD exacerbation,Anaphylaxis,"Thoracic Aortic Dissection
-","AVNRT/AVRT
-",Tension Pneumothorax,Acute Limb Ischemia,Knee Fracture,Jones Fracture,Cellulitis,Thrombotic Thrombocytopenic Purpura (TTP),Sympathomimetic Syndrome,hypoglycemia,,Thrombocytopenia
-Cholecystitis,"Perforated Viscus
-",Testicular Torsion,Esophagitis,Malignancy,Vertigo,Peptic Ulcer Disease,Candidiasis,AAA rupture,Tension Headache,Hypertensive Encephalopathy,Vertigo,Herpes Zoster Opthalmicus,Streptococcal Pharyngitis,Pneumonia,Angioedema,"Tension Pneumothorax
+﻿Category,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Upper Abd Pain,Acute Coronary Syndrome,Myocardial Infarction,Fitz-Hugh-Curtis Syndrome,Cholecystitis,Ascending Cholangitis,Cholelithiasis/Choledocholithiasis,Biliary Colic,"Gastroesophageal Reflux Disease (GERD)
+",Pancreatitis,Pneumonia,Peptic Ulcer Disease,Small Bowel Obstruction,Large Bowel Obstruction,Perforated Viscus,,,,,,,,,,,,,
+Diffuse & Flank abd pain,Abdominal Aortic Aneurysm (AAA),DKA,Mesenteric Ischemia,"Perforated Viscus
+",Acute Gastroenteritis,Kidney Stone,"Pyelonephritis
+",Clostridium Difficile Colitis,Small Bowel Obstruction (SBO),Large Bowel Obstruction (LBO),Irritable Bowel Syndrome,Inflammatory Bowel Disease (Crohn's / Ulcerative Colitis),,,,,,,,,,,,,,,
+Lower Abd/Pelvic pain,Appendicitis,Hernia,Diverticulitis,Testicular Torsion,Ectopic Pregnancy,Ovarian Torsion,Ruptured Ovarian Cyst,Pelvic Inflammatory Disease (PID),Mittelschmerz,"Uterine Fibroid
+",Heavy Menses,Urinary Tract Infection,Constipation,"Orchitis/Epididymitis
+",Inflammatory Bowel Disease (Crohn's / Ulcerative Colitis),Tuboovarian Abscess (TOA),Endometriosis,,,,,,,,,,
+Upper GI bleed,Gastric Ulcer,Duodenal Ulcer,Gastritis,Esophagitis,Gastroesophageal Varices,Mallory-Weiss tear,GI Malignancy,Arterioenteric Fistula,Boerhaave Syndrome,Epistaxis,,,,,,,,,,,,,,,,,
+Lower GI bleed,Diverticulosis,Meckel's Diverticulum,Angiodysplasia,Malignancy,Colitis,Anorectal hemorrhoid,Anorectal Fissure,,,,,,,,,,, ,,,,,,,,,
+Vomiting,Small Bowel Obstruction (SBO),Uremia,Meningitis,Vertigo,Acute Gastroenteritis,Diabetic Ketoacidosis (DKA),Alcohol Intoxication,Hyperemesis Gravidarum,Post-tussive Emesis,Appendicitis,Peptic Ulcer Disease (PUD),Perforated Viscus,,"Pancreatitis
+",,,,,,,,,,,,,
+Vaginal bleeding,missed abortion,threatened abortion,"gynecologic malignancy
+",Peptic Ulcer Disease,Uterine Fibroids,Von Willebrand Disease,Polycystic Ovarian Syndrome (PCOS),Urinary Tract Infection (UTI),Sexually Transmitted Infection (STI),Birth Control Pill side effect,Placental Abruption,Mittelschmerz,,,,,,,,,,,,,,,
+Urinary Tract Infection,Cervicitis,Trichomoniasis,Bacterial Vaginosis,Candidiasis,Pelvic Inflammatory Disease (PID),"Uncomplicated Cystitis
+",,,,,,,,,,,,,,,,,,,,,
+Back Pain,Mechanical Back Pain,Nephrolithiasis,Epidural Abscess,AAA rupture,Cauda Equina,Vertebral compression fracture,"Vertebral Fracture
+","Epidural Abscess
+",Herniated Disc,Kidney Stone,Pyelonephritis,"Pancreatitis
+",Peptic Ulcer Disease,Aortic Dissection,Pulmonary Embolism,Pneumonia,Pneumothorax,Mechanical Back Pain,Nephrolithiasis,Epidural Abscess,AAA rupture,Cauda Equina,Vertebral Compression Fracture,,,,
+Headache,Trigeminal neuralgia,Temporomandibular Joint Disease (TMJ disease),Cluster Headache,Tension Headache,Migraine Headache,Sinusitis,Subarachnoid Hemorrhage,Epidural Hemorrhage,Subdural Hemorrhage,"Idiopathic Intracranial Hypertension (pseudotumor cerebrii)
+",Acute angle closure glaucoma,Intracranial Hemorrhage,Hemorrhagic Stroke,Ischemic Stroke,CNS Infection (Meningitis/Encephalitis/Abscess),Temporal Arteritis (Giant Cell Arteritis),Venous Thrombosis,Carbon Monoxide Poisoning,Carotid Artery Dissection,Preeclampsia,,,,,,,
+Altered Mental Status,Alcohol Intoxication,Alcohol Withdrawal,Hepatic Encephalopathy,Hypertensive Encephalopathy,Hypoglycemia,Hyperosmolar Hyperglycemic State,Intussusception,"Overdose (opiates or medication)
+",Hypoxia,Uremia,Traumatic Brain Injury (TBI),"Brain tumor
+",CNS Infection (Meningitis/Encephalitis/Abscess),Sepsis,Psychosis,Polypharmacy,Stroke,Seizure,Subarachnoid Hemorrhage (SAH),Space-Occupying Lesion,dementia,delirium,Eclampsia,hyponatremia,hypernatremia,hypocalcemia,hypercalcemia
+Weakness/Dizziness,anemia,orthostatic hypotension,Meniere's,Vertigo,syncope,near-syncope,"Posterior Circulation Stroke
+",Stroke/Transient Ischemic Attack (TIA),Bradycardia ,Hypoglycemia,Hypernatremia,Hyponatremia,Hypermagnesemia,"Hypomagnesemia
+",Hypothyroidism,Multiple Sclerosis,Guillain-Barre,Myasthenia Gravis,Transverse Myelitis,Depression,,,,,,,
+Eye,"Orbital Blowout Fracture
+",Globe Rupture,Conjunctivitis,Herpes Zoster Opthalmicus,"Acute Angle Glaucoma
+",Optic Neuritis,Central Retinal Artery Occlusion (CRAO),Central Retinal Vein Occlusion (CRVO),Glaucoma,Hyphema,"Temporal Arteritis (Giant Cell Arteritis)
+",,,,,,,,,,,,,,,,
+Sore Throat,Mononucleosis,Epiglottitis,"Foreign Body
+",Streptococcal Pharyngitis,Ludwig's Angina,Peritonsillar Abscess,Retropharyngeal Abscess,Dental infection,Viral Pharyngitis,,,,,,,,,,,,,,,,,,
+Cough,Allergic rhinitis,Asthma,COPD exacerbation,Pneumonia,Ace-inhibitor adverse effect,Sinusitis,Tuberculosis (TB),Upper Respiratory Infection (URI),,,,,,,,,,,,,,,,,,,
+Shortness of Breath,Asthma,COPD exacerbation,Anaphylaxis,Angioedema,Congestive Heart Failure Exacerbation,Pericardial Effusion,Acute Coronary Syndrome (ACS),Cardiac Tamponade,Non-Cardiogenic Pulmonary Edema,"Pulmonary Embolism
+",Pneumonia,Tension Pneumothorax,Pneumothorax,Upper Airway Obstruction,Upper Respiratory Infection (URI),Tuberculosis (TB),Anxiety,,,,,,,,,,
+Chest Pain,Acute Coronary Syndrome (ACS),Pulmonary Embolism,"Thoracic Aortic Dissection
+","Tension Pneumothorax
+",Esophageal Rupture,Pericarditis,Tamponade,Atrial Fibrillation,Atrial Flutter,Gastroesophageal Reflux Disease (GERD),Musculoskeletal Chest Wall Tenderness,"Pneumothorax
+",Tension Pneumothorax,Esophageal Rupture,Endocarditis,Spontaneous Pneumothorax,NSTEMI,"Cocaine CP
+",,,,,,,,,
+Arrhythmias/Tachycardia,Sinus tachycardia,atrial tachycardia,"AVNRT/AVRT
 ","Multifocal Atrial Tachycardia (MAT)
-",Massive Hemothorax,Gout,Meniscus injury,Lisfranc,Necrotizing Soft Tissue Infection,Necrotizing Fasciitis,Opiate Overdose,thyroid storm,,Disseminated Intravascular Coagulation (DIC)
-Ascending Cholangitis,Acute Gastroenteritis,Ectopic Pregnancy,Gastroesophageal Varices,Colitis,Acute Gastroenteritis,Uterine Fibroids,Pelvic Inflammatory Disease (PID),Cauda Equina,Migraine Headache,Hypoglycemia,syncope,"Acute Angle Glaucoma
-",Ludwig's Angina,Ace-inhibitor adverse effect,Congestive Heart Failure Exacerbation,Esophageal Rupture,Hyperkalemia,Cardiac Tamponade,,LE abscess,Maisonneuve,"Thermal Burn
-",Pemphigus Vulgaris,"High Anion Gap Metabolic Acidosis
-",Diabetic Ketoacidosis (DKA),,Sickle-Cell Disease
-Cholelithiasis/Choledocholithiasis,Kidney Stone,Ovarian Torsion,Mallory-Weiss tear,Anorectal hemorrhoid,Diabetic Ketoacidosis (DKA),Von Willebrand Disease,"Uncomplicated Cystitis
-",Vertebral compression fracture,Sinusitis,Hyperosmolar Hyperglycemic State,near-syncope,Optic Neuritis,Peritonsillar Abscess,Sinusitis,Pericardial Effusion,Pericarditis,Hypokalemia,Great Vessel Injury,,LE cellulitis,Ankle Sprain,,Rocky Mountain Spotted Fever,Acetaminophen (APAP) Overdose ,Hyperosmolar Hyperglycemic State (HHS),,
-Biliary Colic,"Pyelonephritis
-",Ruptured Ovarian Cyst,GI Malignancy,Anorectal Fissure,Alcohol Intoxication,Polycystic Ovarian Syndrome (PCOS),,"Vertebral Fracture
-",Subarachnoid Hemorrhage,Intussusception,"Posterior Circulation Stroke
-",Central Retinal Artery Occlusion (CRAO),Retropharyngeal Abscess,Tuberculosis (TB),Acute Coronary Syndrome (ACS),Tamponade,Hypercalcemia,Blunt Aortic Injury,,Deep Vein Thrombosis (DVT),,,Staphylococcal Scalded Skin Syndrome,Salicylate Toxicity,,,
-"Gastroesophageal Reflux Disease (GERD)
-",Clostridium Difficile Colitis,Pelvic Inflammatory Disease (PID),Arterioenteric Fistula,,Hyperemesis Gravidarum,Urinary Tract Infection (UTI),,"Epidural Abscess
-",Epidural Hemorrhage,"Overdose (opiates or medication)
-",Stroke/Transient Ischemic Attack (TIA),Central Retinal Vein Occlusion (CRVO),Dental infection,Upper Respiratory Infection (URI),Cardiac Tamponade,Atrial Fibrillation,Hypocalcemia,Gun Shot Wound (GSW),,Necrotizing Fasciitis,,,"Toxic Epidermal Necrolysis/Steven Johnson Syndrome (TEN/SJS)
-",Tricyclic Antidepressant Overdose,,,
-Pancreatitis,Small Bowel Obstruction (SBO),Mittelschmerz,Boerhaave Syndrome,,Post-tussive Emesis,Sexually Transmitted Infection (STI),,Herniated Disc,Subdural Hemorrhage,Hypoxia,Bradycardia ,Glaucoma,Viral Pharyngitis,,Non-Cardiogenic Pulmonary Edema,Atrial Flutter,1st Degree AV Nodal Block,,,Arthritis,,,Toxic Shock Syndrome (TSS),Ethylene Glycol Toxicity,,,
-Pneumonia,Large Bowel Obstruction (LBO),"Uterine Fibroid
-",Epistaxis,,Appendicitis,Birth Control Pill side effect,,Kidney Stone,"Idiopathic Intracranial Hypertension (pseudotumor cerebrii)
-",Uremia,Hypoglycemia,Hyphema,,,"Pulmonary Embolism
-",Gastroesophageal Reflux Disease (GERD),2nd degree AV nodal block: Wenckebach (Mobitz type 1),,,Gout,,,Anaphylaxis,Methanol Toxicity,,,
-Peptic Ulcer Disease,Irritable Bowel Syndrome,Heavy Menses,,,Peptic Ulcer Disease (PUD),Placental Abruption,,Pyelonephritis,Acute angle closure glaucoma,Traumatic Brain Injury (TBI),Hypernatremia,"Temporal Arteritis (Giant Cell Arteritis)
-",,,Pneumonia,Musculoskeletal Chest Wall Tenderness,2nd degree AV nodal block: Mobitz type 2,,,Septic Joint,,,Syphilis,Isopropanol Toxicity,,,
-Small Bowel Obstruction,Inflammatory Bowel Disease (Crohn's / Ulcerative Colitis),Urinary Tract Infection,,,Perforated Viscus,Mittelschmerz,,"Pancreatitis
-",Intracranial Hemorrhage,"Brain tumor
-",Hyponatremia,,,,Tension Pneumothorax,"Pneumothorax
-",3rd degree AV nodal block,,,,,,Contact Dermatitis,,,,
-Large Bowel Obstruction,,Constipation,,,,,,Peptic Ulcer Disease,Hemorrhagic Stroke,CNS Infection (Meningitis/Encephalitis/Abscess),Hypermagnesemia,,,,Pneumothorax,Tension Pneumothorax,Wolff-Parkinson White (WPW),,,,,,Erythema Multi,,,,
-Perforated Viscus,,"Orchitis/Epididymitis
-",,,"Pancreatitis
-",,,Aortic Dissection,Ischemic Stroke,Sepsis,"Hypomagnesemia
-",,,,Upper Airway Obstruction,Esophageal Rupture,Long QT syndrome,,,,,,Lyme Disease,,,,
-,,Inflammatory Bowel Disease (Crohn's / Ulcerative Colitis),,,,,,Pulmonary Embolism,CNS Infection (Meningitis/Encephalitis/Abscess),Psychosis,Hypothyroidism,,,,Upper Respiratory Infection (URI),Endocarditis,Brugada Syndrome,,,,,,Pityriasis,,,,
-,,Tuboovarian Abscess (TOA),,,,,,Pneumonia,Temporal Arteritis (Giant Cell Arteritis),Polypharmacy,Multiple Sclerosis,,,,Tuberculosis (TB),Spontaneous Pneumothorax,Hypothermia,,,,,,Scabies,,,,
-,,Endometriosis,,,,,,Pneumothorax,Venous Thrombosis,Stroke,Guillain-Barre,,,,Anxiety,NSTEMI,Wide Complex QRS rhythm,,,,,,Tinea,,,,
-,,,, ,,,,Mechanical Back Pain,Carbon Monoxide Poisoning,Seizure,Myasthenia Gravis,,,,,"Cocaine CP
-",,,,,,,Viral Exanthem,,,,
-,,,,,,,,Nephrolithiasis,Carotid Artery Dissection,Subarachnoid Hemorrhage (SAH),Transverse Myelitis,,,,,,,,,,,,Herpes Zoster,,,,
-,,,,,,,,Epidural Abscess,Preeclampsia,Space-Occupying Lesion,Depression,,,,,,,,,,,,,,,,
-,,,,,,,,AAA rupture,,dementia,,,,,,,,,,,,,,,,,
-,,,,,,,,Cauda Equina,,delirium,,,,,,,,,,,,,,,,,
-,,,,,,,,Vertebral Compression Fracture,,Eclampsia,,,,,,,,,,,,,,,,,
-,,,,,,,,,,hyponatremia,,,,,,,,,,,,,,,,,
-,,,,,,,,,,hypernatremia,,,,,,,,,,,,,,,,,
-,,,,,,,,,,hypocalcemia,,,,,,,,,,,,,,,,,
-,,,,,,,,,,hypercalcemia,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
+",Hyperkalemia,Hypokalemia,Hypercalcemia,Hypocalcemia,1st Degree AV Nodal Block,2nd degree AV nodal block: Wenckebach (Mobitz type 1),2nd degree AV nodal block: Mobitz type 2,3rd degree AV nodal block,Wolff-Parkinson White (WPW),Long QT syndrome,Brugada Syndrome,Hypothermia,Wide Complex QRS rhythm,,,,,,,,,,
+Chest Trauma,Open Pneumothorax,Flail Chest,Tension Pneumothorax,Massive Hemothorax,Cardiac Tamponade,Great Vessel Injury,Blunt Aortic Injury,Gun Shot Wound (GSW),,,,,,,,,,,,,,,,,,,
+Musculoskeletal,Compartment Syndrome,Septic Arthritis,Acute Limb Ischemia,Gout,,,,,,,,,,,,,,,,,,,,,,,
+Leg Pain,ACL Tear,"MCL/PCL Tear
+",Knee Fracture,Meniscus injury,LE abscess,LE cellulitis,Deep Vein Thrombosis (DVT),Necrotizing Fasciitis,Arthritis,Gout,Septic Joint,,,,,,,,,,,,,,,,
+Ankle & Foot Pain,Achilles rupture,Calcaneus injury,Jones Fracture,Lisfranc,Maisonneuve,Ankle Sprain,,,,,,,,,,,,,,,,,,,,,
+Skin,Abscess,Animal Bite,Cellulitis,Necrotizing Soft Tissue Infection,"Thermal Burn
+",,,,,,,,,,,,,,,,,,,,,,
+Rash,DRESS,Microangiopathic Hemolytic Anemia,Thrombotic Thrombocytopenic Purpura (TTP),Necrotizing Fasciitis,Pemphigus Vulgaris,Rocky Mountain Spotted Fever,Staphylococcal Scalded Skin Syndrome,"Toxic Epidermal Necrolysis/Steven Johnson Syndrome (TEN/SJS)
+",Toxic Shock Syndrome (TSS),Anaphylaxis,Syphilis,Contact Dermatitis,Erythema Multi,Lyme Disease,Pityriasis,Scabies,Tinea,Viral Exanthem,Herpes Zoster,,,,,,,,
+Toxic Ingestion,Anticholinergic Toxidrome,Cholinergic Poisoning,Sympathomimetic Syndrome,Opiate Overdose,"High Anion Gap Metabolic Acidosis
+",Acetaminophen (APAP) Overdose ,Salicylate Toxicity,Tricyclic Antidepressant Overdose,Ethylene Glycol Toxicity,Methanol Toxicity,Isopropanol Toxicity,,,,,,,,,,,,,,,,
+Endocrine,hyperglycemia,hyperkalemia,hypoglycemia,thyroid storm,Diabetic Ketoacidosis (DKA),Hyperosmolar Hyperglycemic State (HHS),,,,,,,,,,,,,,,,,,,,,
+Environmental Complaints,Hyperthermia,Hypothermia,,,,,,,,,,,,,,,,,,,,,,,,,
+Bleeding/hematologic,Epistaxis,Hematuria,Thrombocytopenia,Disseminated Intravascular Coagulation (DIC),Sickle-Cell Disease,,,,,,,,,,,,,,,,,,,,,,
