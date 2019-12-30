@@ -19,22 +19,10 @@
       <div class="">
         <h3 class="">Clinical Trainer</h3>
         <p class=""></p>
-        <button type="button" class="button-primary" href="#case-list">
+        <button type="button" class="button-primary" id="case-list-btn">
           Choose Case
         </button>
-        <h5>Case List</h5>
-        <button type="button" class="close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div>
-          <p class="lead">Select a case below:<p>
-          <select class="form-control" id="case-selection">
-          </select>
-        </div>
-        <div class="">
-          <button type="button" class="button-primary" id="select-btn">Select</button>
-        </div>
-        <p class="card-text">Disclaimer: learning tool does not substitute for clinical judgement, etc.</p>
+        <p class="">Disclaimer: learning tool does not substitute for clinical judgement, etc.</p>
       </div>
     </div>
 
@@ -69,9 +57,10 @@
             <div id="ROS">
               <div id="ROSGeneral"></div>
               <div id="ROSHEENT"></div>
-              <div id="ROSResdiviratory"></div>
+              <div id="ROSRespiratory"></div>
               <div id="ROSCardiovascular"></div>
               <div id="ROSGastrointestinal"></div>
+              <div id="ROSGenitoruinary"></div>
               <div id="ROSMusculoskeletal"></div>
               <div id="ROSNeurologic"></div>
               <div id="ROSBehavioral"></div>
@@ -122,7 +111,7 @@
             <h5>DDx</h5>
           </section>
           <section class="u-max-full-width" id="menu">
-            <button type="button" class="button-primary" data-toggle="modal" data-target="#patient-enc">Patient Encounter</button>
+            <button type="button" class="button-primary" id="patient-enc-btn">Patient Encounter</button>
             <button type="button" class="button-primary" id="diff-diagnosis">Differential Diagnosis</button>
             <button type="button" class="button-primary" id="labs">Labs</button>
             <button type="button" class="button-primary" id="imaging">Imaging</button>
@@ -133,86 +122,84 @@
       </div>
     </div>
 
-    <div class="modal" id="patient-enc" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Patient Encounter</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <button type="button" class="collapsible">Review of Symptoms</button>
-            <div class="content">
-              <div class="row">
-                <button type="button" class="button-primary" data-dismiss="modal" id="ROSGeneralBtn">
-                  General
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="ROSHEENTBtn">
-                  HEENT
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="ROSRespiratoryBtn">
-                  Respiratory
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="ROSCardiovascularBtn">
-                  Cardiovascular
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="ROSGastrointestinalBtn">
-                  Gastrointestinal
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="ROSGenitoruinaryBtn">
-                  Genitoruinary
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="ROSMusculoskeletalBtn">
-                  Musculoskeletal
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="ROSNeurologicBtn">
-                  Neurologic
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="ROSBehavioralBtn">
-                  Behavioral
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="ROSSkinBtn">
-                  Skin
-                </button>
-              </div>
+    <div class="modal" id="patient-enc">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Patient Encounter</h5>
+          <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <button type="button" class="collapsible">Review of Symptoms</button>
+          <div class="content">
+            <div class="row">
+              <button type="button" class="button-primary" data-dismiss="modal" id="ROSGeneralBtn">
+                General
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="ROSHEENTBtn">
+                HEENT
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="ROSRespiratoryBtn">
+                Respiratory
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="ROSCardiovascularBtn">
+                Cardiovascular
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="ROSGastrointestinalBtn">
+                Gastrointestinal
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="ROSGenitoruinaryBtn">
+                Genitoruinary
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="ROSMusculoskeletalBtn">
+                Musculoskeletal
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="ROSNeurologicBtn">
+                Neurologic
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="ROSBehavioralBtn">
+                Behavioral
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="ROSSkinBtn">
+                Skin
+              </button>
             </div>
-            <button type="button" class="collapsible">Physical Exam</button>
-            <div class="content">
-              <div class="row">
-                <button type="button" class="button-primary" data-dismiss="modal" id="PEGeneralAppearanceBtn">
-                  General Appearance
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="PEHEENTBtn">
-                  HEENT
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="PENeckBtn">
-                  Neck
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="PECardiovascularBtn">
-                  Cardiovascular
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="PERespiratoryBtn">
-                  Respiratory
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="PEMusculoskeletalBtn">
-                  Musculoskeletal
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="PEGastrointestinalBtn">
-                  Gastrointestinal
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="PEGenitourinaryBtn">
-                  Genitoruinary
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="PESkinBtn">
-                  Skin
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="PENeurologicBtn">
-                  Neurologic
-                </button>
-                <button type="button" class="button-primary" data-dismiss="modal" id="PEBehavioralBtn">
-                  Behavioral
-                </button>
-              </div>
+          </div>
+          <button type="button" class="collapsible">Physical Exam</button>
+          <div class="content">
+            <div class="row">
+              <button type="button" class="button-primary" data-dismiss="modal" id="PEGeneralAppearanceBtn">
+                General Appearance
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="PEHEENTBtn">
+                HEENT
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="PENeckBtn">
+                Neck
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="PECardiovascularBtn">
+                Cardiovascular
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="PERespiratoryBtn">
+                Respiratory
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="PEMusculoskeletalBtn">
+                Musculoskeletal
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="PEGastrointestinalBtn">
+                Gastrointestinal
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="PEGenitourinaryBtn">
+                Genitoruinary
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="PESkinBtn">
+                Skin
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="PENeurologicBtn">
+                Neurologic
+              </button>
+              <button type="button" class="button-primary" data-dismiss="modal" id="PEBehavioralBtn">
+                Behavioral
+              </button>
             </div>
           </div>
           <div class="modal-body">

@@ -24,7 +24,59 @@
     });
   }
 
+  // Get the modal
+  var caseListModal = document.getElementById("case-list");
 
+  // Get the button that opens the modal
+  var caseListBtn = document.getElementById("case-list-btn");
+
+  // Get the <span> element that closes the modal
+  var closeBtn = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal
+  caseListBtn.onclick = function() {
+    caseListModal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  closeBtn.onclick = function() {
+    console.log("click close");
+    caseListModal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == caseListModal) {
+      caseListModal.style.display = "none";
+    }
+  }
+
+
+  // Get the modal
+  var patientEncModal = document.getElementById("patient-enc");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("patient-enc-btn");
+
+  // Get the <span> element that closes the modal
+  // var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal
+  btn.onclick = function() {
+    patientEncModal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  closeBtn.onclick = function() {
+    patientEncModal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == patientEncModal) {
+      patientEncModal.style.display = "none";
+    }
+  }
 
   d3.json("data/case-desc.json").then(function(casesJson) {
     displayCases(casesJson);
@@ -64,12 +116,15 @@
         }
       });
 
+      // hide modal
+      caseListModal.style.display = "none";
+
       // hide case selection area and show case details
       page1.style.display = 'none';
       page3.style.display = 'block';
 
       // build case details page
-      console.log(caseDetails);
+      // console.log(caseDetails);
       showCase(caseDetails);
     }, false);
 
@@ -95,10 +150,11 @@
     var ROSList = ["ROSGeneral", "ROSHEENT", "ROSRespiratory", "ROSCardiovascular", "ROSGastrointestinal", "ROSGenitoruinary", "ROSMusculoskeletal", "ROSNeurologic", "ROSBehavioral", "ROSSkin"];
     ROSList.forEach(function (item, index) {
       var el = document.getElementById(item);
+      console.log(el);
       var elBtn = document.getElementById(item+"Btn");
-      // if (elBtn == null) {
-      //   console.log(item);
-      // }
+      if (elBtn == null) {
+        console.log(item);
+      }
       elBtn.onclick = function() {
         el.innerHTML = item+": "+details[item];
         el.style.display = "inline";
@@ -106,6 +162,9 @@
         var statement = document.createElement("div")
         statement.innerHTML = item+": "+details[item];
         document.getElementById('MDM').append(statement);
+
+        //close patient-enc modal
+        patientEncModal.style.display = "none";
       };
     });
 
