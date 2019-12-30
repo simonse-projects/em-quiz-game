@@ -33,6 +33,7 @@ var btn = document.getElementById("patient-enc-btn");
 
 // Get the <span> element that closes the modal
 var closeBtn = document.getElementsByClassName("close");
+// console.log(closeBtn);
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -40,7 +41,8 @@ btn.onclick = function() {
 }
 
 // When the user clicks on (x), close the modal
-closeBtn.onclick = function() {
+closeBtn[1].onclick = function() {
+  // console.log("close");
   patientEncModal.style.display = "none";
 }
 
@@ -74,8 +76,7 @@ function displayCases(cases) {
   }
 
   // When the user clicks on (x), close the modal
-  closeBtn.onclick = function() {
-    console.log("click close");
+  closeBtn[0].onclick = function() {
     caseListModal.style.display = "none";
   }
 
