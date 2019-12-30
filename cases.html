@@ -16,10 +16,10 @@
       <h1 class="card-header">
         EM Quiz Game
       </h1>
-      <div class="card-body">
-        <h3 class="card-title">Clinical Trainer</h3>
-        <p class="card-text"></p>
-        <button type="button" class="button-primary" data-toggle="modal" data-target="#case-list">
+      <div class="">
+        <h3 class="">Clinical Trainer</h3>
+        <p class=""></p>
+        <button type="button" class="button-primary" href="#case-list">
           Choose Case
         </button>
         <h5>Case List</h5>
@@ -56,6 +56,172 @@
           </div>
       </div>
     </div>
+
+    <div class="container u-full-width" id="page-three">
+      <h2 id="patient-name">Patient Name: </h2>
+      <div class="row">
+        <div class="nine columns">
+          <div class="six columns border overflow-auto">
+            <h5>History of Present Illness:</h5>
+            <div id="HPI"></div>
+            <hr>
+            <h5>ROS</h5>
+            <div id="ROS">
+              <div id="ROSGeneral"></div>
+              <div id="ROSHEENT"></div>
+              <div id="ROSResdiviratory"></div>
+              <div id="ROSCardiovascular"></div>
+              <div id="ROSGastrointestinal"></div>
+              <div id="ROSMusculoskeletal"></div>
+              <div id="ROSNeurologic"></div>
+              <div id="ROSBehavioral"></div>
+              <div id="ROSSkin"></div>
+            </div>
+            <hr>
+          </div>
+          <div class="six columns border">
+            <h5>Vitals</h5>
+            <section id="vitals">
+              <span id="VSRhythm"></span>
+              Pulse: <span id="VSPulse"></span><br>
+              BP: <span id="VSSBP"></span>/<span id="VSDBP"></span>
+              O2Sat: <span id="VSO2Sat"></span><br>
+              Temp: <span id="VSTemperature"></span>
+              Respiratory Rate: <span id="VSRespiratoryRate"></span>
+            </section>
+            <hr>
+            <h5>PE</h5>
+            <div id="PE">
+              <div id="PEGeneralAppearance"></div>
+              <div id="PEHEENT"></div>
+              <div id="PENeck"></div>
+              <div id="PECardiovascular"></div>
+              <div id="PERespiratory"></div>
+              <div id="PEMusculoskeletal"></div>
+              <div id="PEGastrointestinal"></div>
+              <div id="PEGenitourinary"></div>
+              <div id="PESkin"></div>
+              <div id="PENeurologic"></div>
+              <div id="PEBehavioral"></div>
+            </div>
+            <h5>Labs</h5>
+            <h5>Imaging</h5>
+          </div>
+          <div class="twelve columns">
+            <h5>ED Course</h5>
+            <h5>MDM</h5>
+            <pre><code id="MDM">[summary statement]</code></pre>
+          </div>
+        </div>
+        <div class="three columns border">
+          <section id="pictures">
+            <h5>Pictures</h5>
+          </section>
+          <hr>
+          <section id="DDx">
+            <h5>DDx</h5>
+          </section>
+          <section class="u-max-full-width" id="menu">
+            <button type="button" class="button-primary" data-toggle="modal" data-target="#patient-enc">Patient Encounter</button>
+            <button type="button" class="button-primary" id="diff-diagnosis">Differential Diagnosis</button>
+            <button type="button" class="button-primary" id="labs">Labs</button>
+            <button type="button" class="button-primary" id="imaging">Imaging</button>
+            <button type="button" class="button-primary" id="treatment">Treatment</button>
+            <button type="button" class="button-primary" id="disposition">Disposition</button>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="patient-enc" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Patient Encounter</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <button type="button" class="collapsible">Review of Symptoms</button>
+            <div class="content">
+              <div class="row">
+                <button type="button" class="button-primary" data-dismiss="modal" id="ROSGeneralBtn">
+                  General
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="ROSHEENTBtn">
+                  HEENT
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="ROSRespiratoryBtn">
+                  Respiratory
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="ROSCardiovascularBtn">
+                  Cardiovascular
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="ROSGastrointestinalBtn">
+                  Gastrointestinal
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="ROSGenitoruinaryBtn">
+                  Genitoruinary
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="ROSMusculoskeletalBtn">
+                  Musculoskeletal
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="ROSNeurologicBtn">
+                  Neurologic
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="ROSBehavioralBtn">
+                  Behavioral
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="ROSSkinBtn">
+                  Skin
+                </button>
+              </div>
+            </div>
+            <button type="button" class="collapsible">Physical Exam</button>
+            <div class="content">
+              <div class="row">
+                <button type="button" class="button-primary" data-dismiss="modal" id="PEGeneralAppearanceBtn">
+                  General Appearance
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="PEHEENTBtn">
+                  HEENT
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="PENeckBtn">
+                  Neck
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="PECardiovascularBtn">
+                  Cardiovascular
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="PERespiratoryBtn">
+                  Respiratory
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="PEMusculoskeletalBtn">
+                  Musculoskeletal
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="PEGastrointestinalBtn">
+                  Gastrointestinal
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="PEGenitourinaryBtn">
+                  Genitoruinary
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="PESkinBtn">
+                  Skin
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="PENeurologicBtn">
+                  Neurologic
+                </button>
+                <button type="button" class="button-primary" data-dismiss="modal" id="PEBehavioralBtn">
+                  Behavioral
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="scripts/app.js"></script>

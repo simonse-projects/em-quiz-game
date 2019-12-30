@@ -31,30 +31,36 @@
   });
 
   function displayCases(cases) {
+    // console.log("displayCases");
+    // console.log(cases);
     var caseSelection = document.getElementById("case-selection");
 
     // empty case list
     // caseSelection.empty();
-    while(caseSelection.firstChild)
-      caseSelection.removeChild(caseSelection.firstChild);
+    // while(caseSelection.firstChild) {
+    //   caseSelection.removeChild(caseSelection.firstChild);
+    // }
     // loop through cases to build list
-    cases.forEach(function (index, value) {
-      caseSelection.append("<option value="+value["CaseNumber"]+">"+
-          value["PatientName"]+" - "+value["Age"]+value["Gender"]+" - "+
-          value["ChiefComplaint"]+"</option>");
+    cases.forEach(function (item) {
+      var caseItem = caseSelection.appendChild(document.createElement("option"));
+      // console.log(caseItem);
+      caseItem.value = item['CaseNumber'];
+      caseItem.innerHTML = item["PatientName"]+" - "+item["Age"]+item["Gender"]+" - "+
+          item["ChiefComplaint"];
     });
 
     // button selects case
     document.getElementById("select-btn").addEventListener("click", function (e) {
-      console.log(caseSelection.children("option:selected").val());
-      document.getElementById("case-list").modal("hide");
+      console.log(caseSelection.value);
+      // document.getElementById("case-list").modal("hide");
 
       // select case with selected ID number
-      var caseNumber = document.getElementById("case-selection").children("option:selected").val();
+      // console.log(document.getElementById("case-selection").children);
+      var caseNumber = caseSelection.value;
       var caseDetails = [];
-      cases.forEach(function (index, value) {
-        if (value["CaseNumber"] == caseNumber) {
-          caseDetails = value;
+      cases.forEach(function (item) {
+        if (item["CaseNumber"] == caseNumber) {
+          caseDetails = item;
         }
       });
 
@@ -63,6 +69,7 @@
       page3.style.display = 'block';
 
       // build case details page
+      console.log(caseDetails);
       showCase(caseDetails);
     }, false);
 
