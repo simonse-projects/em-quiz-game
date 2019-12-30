@@ -153,7 +153,7 @@ function showCase(details) {
   var ROSList = ["ROSGeneral", "ROSHEENT", "ROSRespiratory", "ROSCardiovascular", "ROSGastrointestinal", "ROSGenitoruinary", "ROSMusculoskeletal", "ROSNeurologic", "ROSBehavioral", "ROSSkin"];
   ROSList.forEach(function (item, index) {
     var el = document.getElementById(item);
-    console.log(el);
+    // console.log(el);
     var elBtn = document.getElementById(item+"Btn");
     if (elBtn == null) {
       console.log(item);
