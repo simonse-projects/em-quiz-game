@@ -7,14 +7,17 @@ page3 = document.getElementById('page-three');
 page3.style.display = 'none';
 // page1.style.display = 'none';
 
+// Get the <span> element that closes the modal
+var closeBtn = document.getElementsByClassName("close");
+// console.log(closeBtn);
+
+
 // display DDx options
 // load ddx options from json
 d3.json("data/ddx.json").then(function (ddxList) {
   // Get the modal
   var ddxModal = document.getElementById("ddx");
   ddxModalContent = ddxModal.firstElementChild;
-  // ddxModalContent.style.height = "80%";
-  // ddxModalContent.style["overflow-y"] = "scroll";
 
   // add categories to modal
   // console.log(ddxList);
@@ -98,6 +101,7 @@ d3.json("data/ddx.json").then(function (ddxList) {
 
 // collapsible areas
 var coll = document.getElementsByClassName("collapsible");
+// console.log(coll);
 var i;
 
 for (i = 0; i < coll.length; i++) {
@@ -120,10 +124,6 @@ var patientEncModal = document.getElementById("patient-enc");
 
 // Get the button that opens the modal
 var btn = document.getElementById("patient-enc-btn");
-
-// Get the <span> element that closes the modal
-var closeBtn = document.getElementsByClassName("close");
-// console.log(closeBtn);
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
