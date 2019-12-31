@@ -194,4 +194,45 @@ function showCase(details) {
     };
   });
 
+  // display DDx options
+  // load ddx options from json
+  d3.json("data/ddx.json").then(function (ddxList) {
+    // Get the modal
+    var ddxModal = document.getElementById("ddx");
+
+    // add categories to modal
+    // console.log(ddxList);
+    var ddxCatList = [];
+    ddxList.forEach(function(diagnosis) {
+      // console.log(diagnosis);
+      if (!ddxCatList.includes(diagnosis['Category'])) {
+        ddxCatList.push(diagnosis['Category']);
+      }
+    });
+    console.log(ddxCatList);
+
+    // add diagnosis buttons to modal
+
+    // Get the button that opens the modal
+    var ddxBtn = document.getElementById("ddx-btn");
+
+    // When the user clicks on the button, open the modal
+    ddxBtn.onclick = function() {
+      ddxModal.style.display = "block";
+    }
+
+    // When the user clicks on (x), close the modal
+    closeBtn[2].onclick = function() {
+      // console.log("close");
+      ddxModal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == ddxModal) {
+        ddxModal.style.display = "none";
+      }
+    }
+  });
+
 } //end showCase

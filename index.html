@@ -112,7 +112,7 @@
           </section>
           <section class="u-max-full-width" id="menu">
             <button type="button" class="button-primary" id="patient-enc-btn">Patient Encounter</button>
-            <button type="button" class="button-primary" id="diff-diagnosis">Differential Diagnosis</button>
+            <button type="button" class="button-primary" id="ddx-btn">Differential Diagnosis</button>
             <button type="button" class="button-primary" id="labs">Labs</button>
             <button type="button" class="button-primary" id="imaging">Imaging</button>
             <button type="button" class="button-primary" id="treatment">Treatment</button>
@@ -209,6 +209,23 @@
       </div>
     </div>
 
+    <div class="modal" id="ddx">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Differential Diagnosis</h5>
+          <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="ddx-cat">
+            <button type="button" class="collapsible"></button>
+            <div class="content">
+              <div class="row">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="scripts/app.js"></script>
