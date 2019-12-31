@@ -1,5 +1,6 @@
 html {
   margin: 20px;
+  max-height: 100%;
 }
 
 /* The Modal (background) */
