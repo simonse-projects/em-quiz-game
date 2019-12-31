@@ -209,7 +209,8 @@ function showCase(details) {
         ddxCatList.push(diagnosis['Category']);
       }
     });
-    console.log(ddxCatList);
+    // console.log(ddxCatList);
+    
 
     // add diagnosis buttons to modal
 
