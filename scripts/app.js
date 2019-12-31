@@ -49,15 +49,21 @@ d3.json("data/ddx.json").then(function (ddxList) {
         var diagBtn = document.createElement("button");
         diagBtn.className = "button-primary";
         diagBtn.setAttribute("type","button");
-        diagBtn.setAttribute("id",item["Diagnosis"])
+        diagBtn.setAttribute("id",item["Diagnosis"]);
         diagBtn.innerHTML = item["Diagnosis"];
+        diagBtn.onclick = function() {
+          var statement = document.createElement("div")
+          statement.innerHTML = "DDx: "+item["Diagnosis"];
+          document.getElementById('MDM').append(statement);
+
+          //close ddx modal
+          ddx.style.display = "none";
+        };
         row.appendChild(diagBtn);
       }
     });
-    
-  })
 
-  // add diagnosis buttons to modal
+  })
 
   // Get the button that opens the modal
   var ddxBtn = document.getElementById("ddx-btn");
