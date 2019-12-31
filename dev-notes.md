@@ -1,6 +1,6 @@
 # Development Notes
 ## Data
-1. data/ddx.csv
+1. data/ddx.csv - edit this file in a text editor if needed
 2. treatments file format
 
 ## UI
