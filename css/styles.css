@@ -95,7 +95,7 @@ hr {
 /* Style the collapsible content. Note: hidden by default */
 .content {
  display: none;
- overflow-y: scroll;
+ /* overflow-y: scroll; */
  background-color: #f1f1f1;
  margin-bottom: 5px;
 }

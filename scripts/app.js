@@ -13,6 +13,7 @@ var i;
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
+    // console.log("clicked");
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
@@ -137,7 +138,7 @@ function displayCases(cases) {
 function showCase(details) {
   document.getElementById("patient-name").append(details["PatientName"]);
   // console.log(details["History1"] + details["History2"]);
-  document.getElementById("HPI").append(details["History1"] +"<br>"+ details["History2"]);
+  document.getElementById("HPI").append(details["History1"] +" "+ details["History2"]);
   var VSRhythm = document.getElementById("VSRhythm");
   VSRhythm.innerHTML = "<img src='images/VRhythm_NSR.png' width=50%>"
 
@@ -233,7 +234,16 @@ function showCase(details) {
       content.appendChild(row);
 
       // add diagnosis buttons
-
+      ddxList.filter(function (item) {
+        if (item["Category"] == category) {
+          // console.log(item["Diagnosis"]);
+          var diagBtn = document.createElement("button");
+          diagBtn.className = "button-primary";
+          diagBtn.setAttribute("type","button");
+          diagBtn.innerHTML = item["Diagnosis"];
+          row.appendChild(diagBtn);
+        }
+      });
 
       ddxModalContent.appendChild(ddxModalCat);
     })
