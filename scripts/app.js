@@ -199,6 +199,7 @@ function showCase(details) {
   d3.json("data/ddx.json").then(function (ddxList) {
     // Get the modal
     var ddxModal = document.getElementById("ddx");
+    ddxModalContent = ddxModal.firstElementChild;
 
     // add categories to modal
     // console.log(ddxList);
@@ -210,7 +211,32 @@ function showCase(details) {
       }
     });
     // console.log(ddxCatList);
-    
+    var ddxModalCat = null;
+    ddxCatList.forEach(function (category) {
+      // add collapsible list headers for each category
+      ddxModalCat = document.createElement("div");
+      ddxModalCat.className = "ddx-cat";
+
+      // add button
+      var ddxCatBtn = document.createElement("button");
+      ddxCatBtn.className = "collapsible";
+      ddxCatBtn.setAttribute("type","button");
+      ddxCatBtn.innerHTML = category;
+      ddxModalCat.appendChild(ddxCatBtn);
+
+      // add divs for buttons
+      var content = document.createElement("div");
+      content.className = "content";
+      ddxModalCat.appendChild(content);
+      var row = document.createElement("div");
+      row.className = "row";
+      content.appendChild(row);
+
+      // add diagnosis buttons
+
+
+      ddxModalContent.appendChild(ddxModalCat);
+    })
 
     // add diagnosis buttons to modal
 
