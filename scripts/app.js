@@ -37,6 +37,7 @@ d3.json("data/ddx.json").then(function (ddxList) {
     // add divs for buttons
     var content = document.createElement("div");
     content.className = "content";
+    content.style.display = "block";  // temp fix for collapsible buttons not working
     ddxModalContent.appendChild(content);
     var row = document.createElement("div");
     row.className = "row";
