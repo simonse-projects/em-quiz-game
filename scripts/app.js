@@ -7,6 +7,80 @@ page3 = document.getElementById('page-three');
 page3.style.display = 'none';
 // page1.style.display = 'none';
 
+// display DDx options
+// load ddx options from json
+d3.json("data/ddx.json").then(function (ddxList) {
+  // Get the modal
+  var ddxModal = document.getElementById("ddx");
+  ddxModalContent = ddxModal.firstElementChild;
+
+  // add categories to modal
+  // console.log(ddxList);
+  var ddxCatList = [];
+  ddxList.forEach(function(diagnosis) {
+    // console.log(diagnosis);
+    if (!ddxCatList.includes(diagnosis['Category'])) {
+      ddxCatList.push(diagnosis['Category']);
+    }
+  });
+  // console.log(ddxCatList);
+  var ddxModalCat = null;
+  ddxCatList.forEach(function (category) {
+    // add collapsible list headers for each category
+    // add button
+    var ddxCatBtn = document.createElement("button");
+    ddxCatBtn.className = "collapsible";
+    ddxCatBtn.setAttribute("type","button");
+    ddxCatBtn.innerHTML = category;
+    ddxModalContent.appendChild(ddxCatBtn);
+
+    // add divs for buttons
+    var content = document.createElement("div");
+    content.className = "content";
+    ddxModalContent.appendChild(content);
+    var row = document.createElement("div");
+    row.className = "row";
+    content.appendChild(row);
+
+    // add diagnosis buttons
+    ddxList.filter(function (item) {
+      if (item["Category"] == category) {
+        // console.log(item["Diagnosis"]);
+        var diagBtn = document.createElement("button");
+        diagBtn.className = "button-primary";
+        diagBtn.setAttribute("type","button");
+        diagBtn.setAttribute("id",item["Diagnosis"])
+        diagBtn.innerHTML = item["Diagnosis"];
+        row.appendChild(diagBtn);
+      }
+    });
+    
+  })
+
+  // add diagnosis buttons to modal
+
+  // Get the button that opens the modal
+  var ddxBtn = document.getElementById("ddx-btn");
+
+  // When the user clicks on the button, open the modal
+  ddxBtn.onclick = function() {
+    ddxModal.style.display = "block";
+  }
+
+  // When the user clicks on (x), close the modal
+  closeBtn[2].onclick = function() {
+    // console.log("close");
+    ddxModal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == ddxModal) {
+      ddxModal.style.display = "none";
+    }
+  }
+});
+
 // collapsible areas
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -193,83 +267,6 @@ function showCase(details) {
       //close patient-enc modal
       patientEncModal.style.display = "none";
     };
-  });
-
-  // display DDx options
-  // load ddx options from json
-  d3.json("data/ddx.json").then(function (ddxList) {
-    // Get the modal
-    var ddxModal = document.getElementById("ddx");
-    ddxModalContent = ddxModal.firstElementChild;
-
-    // add categories to modal
-    // console.log(ddxList);
-    var ddxCatList = [];
-    ddxList.forEach(function(diagnosis) {
-      // console.log(diagnosis);
-      if (!ddxCatList.includes(diagnosis['Category'])) {
-        ddxCatList.push(diagnosis['Category']);
-      }
-    });
-    // console.log(ddxCatList);
-    var ddxModalCat = null;
-    ddxCatList.forEach(function (category) {
-      // add collapsible list headers for each category
-      ddxModalCat = document.createElement("div");
-      ddxModalCat.className = "ddx-cat";
-
-      // add button
-      var ddxCatBtn = document.createElement("button");
-      ddxCatBtn.className = "collapsible";
-      ddxCatBtn.setAttribute("type","button");
-      ddxCatBtn.innerHTML = category;
-      ddxModalCat.appendChild(ddxCatBtn);
-
-      // add divs for buttons
-      var content = document.createElement("div");
-      content.className = "content";
-      ddxModalCat.appendChild(content);
-      var row = document.createElement("div");
-      row.className = "row";
-      content.appendChild(row);
-
-      // add diagnosis buttons
-      ddxList.filter(function (item) {
-        if (item["Category"] == category) {
-          // console.log(item["Diagnosis"]);
-          var diagBtn = document.createElement("button");
-          diagBtn.className = "button-primary";
-          diagBtn.setAttribute("type","button");
-          diagBtn.innerHTML = item["Diagnosis"];
-          row.appendChild(diagBtn);
-        }
-      });
-
-      ddxModalContent.appendChild(ddxModalCat);
-    })
-
-    // add diagnosis buttons to modal
-
-    // Get the button that opens the modal
-    var ddxBtn = document.getElementById("ddx-btn");
-
-    // When the user clicks on the button, open the modal
-    ddxBtn.onclick = function() {
-      ddxModal.style.display = "block";
-    }
-
-    // When the user clicks on (x), close the modal
-    closeBtn[2].onclick = function() {
-      // console.log("close");
-      ddxModal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == ddxModal) {
-        ddxModal.style.display = "none";
-      }
-    }
   });
 
 } //end showCase
