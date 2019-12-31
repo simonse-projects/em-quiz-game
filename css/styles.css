@@ -23,6 +23,8 @@ html {
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
+  max-height: 80%;
+  overflow-y: auto;
 }
 
 /* The Close Button */
@@ -95,7 +97,7 @@ hr {
 /* Style the collapsible content. Note: hidden by default */
 .content {
  display: none;
- /* overflow-y: scroll; */
+ /* overflow-y: auto; */
  background-color: #f1f1f1;
  margin-bottom: 5px;
 }

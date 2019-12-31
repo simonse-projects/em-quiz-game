@@ -13,6 +13,8 @@ d3.json("data/ddx.json").then(function (ddxList) {
   // Get the modal
   var ddxModal = document.getElementById("ddx");
   ddxModalContent = ddxModal.firstElementChild;
+  // ddxModalContent.style.height = "80%";
+  // ddxModalContent.style["overflow-y"] = "scroll";
 
   // add categories to modal
   // console.log(ddxList);
