@@ -53,6 +53,12 @@ d3.json("data/ddx.json").then(function (ddxList) {
         diagBtn.setAttribute("id",item["Diagnosis"]);
         diagBtn.innerHTML = item["Diagnosis"];
         diagBtn.onclick = function() {
+          // add to DDx section and summary statements
+          var ddxDiv = document.getElementById("ddx-list");
+          var ddxDivItem = document.createElement("div");
+          ddxDivItem.innerHTML = item["Category"]+": "+item["Diagnosis"];
+          ddxDiv.append(ddxDivItem);
+
           var statement = document.createElement("div")
           statement.innerHTML = "DDx: "+item["Diagnosis"];
           document.getElementById('MDM').append(statement);
