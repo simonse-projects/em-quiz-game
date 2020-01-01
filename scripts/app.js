@@ -17,7 +17,7 @@ var closeBtn = document.getElementsByClassName("close");
 d3.json("data/ddx.json").then(function (ddxList) {
   // Get the modal
   var ddxModal = document.getElementById("ddx");
-  ddxModalContent = ddxModal.firstElementChild;
+  var ddxModalContent = ddxModal.firstElementChild;
 
   // add categories to modal
   // console.log(ddxList);
@@ -86,6 +86,7 @@ d3.json("data/ddx.json").then(function (ddxList) {
   }
 
   // When the user clicks on (x), close the modal
+  // change from hard-coding [2] value - seems error-prone
   closeBtn[2].onclick = function() {
     // console.log("close");
     ddxModal.style.display = "none";
