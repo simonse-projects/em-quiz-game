@@ -11,7 +11,6 @@ page3.style.display = 'none';
 var closeBtn = document.getElementsByClassName("close");
 // console.log(closeBtn);
 
-
 // display DDx options
 // load ddx options from json
 d3.json("data/ddx.json").then(function (ddxList) {
@@ -66,7 +65,9 @@ d3.json("data/ddx.json").then(function (ddxList) {
 
           var statement = document.createElement("div")
           statement.innerHTML = "DDx: "+item["Diagnosis"];
-          document.getElementById('MDM').append(statement);
+          // create <br> element
+          var br = document.createElement('br')
+          document.getElementById('ed-course').append(item["Diagnosis"], br);
 
           //close ddx modal
           ddx.style.display = "none";
@@ -256,7 +257,9 @@ function showCase(details) {
       el.style["padding-left"] = "10px";
       var statement = document.createElement("div")
       statement.innerHTML = item+": "+details[item];
-      document.getElementById('MDM').append(statement);
+      // create <br> element
+      var br = document.createElement('br')
+      document.getElementById('ed-course').append("Performed "+item, br);
 
       //close patient-enc modal
       patientEncModal.style.display = "none";
@@ -278,7 +281,9 @@ function showCase(details) {
       el.style["padding-left"] = "10px";
       var statement = document.createElement("div")
       statement.innerHTML = item+": "+details[item];
-      document.getElementById('MDM').append(statement);
+      // create <br> element
+      var br = document.createElement('br')
+      document.getElementById('ed-course').append(item, br);
 
       //close patient-enc modal
       patientEncModal.style.display = "none";
