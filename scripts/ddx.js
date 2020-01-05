@@ -47,6 +47,7 @@ d3.json("data/ddx.json").then(function (ddxList) {
           // add to DDx section and summary statements
           var ddxDiv = document.getElementById("ddx-list");
           var ddxDivItem = document.createElement("div");
+          ddxDivItem.className = item["Diagnosis"];
           ddxDivItem.innerHTML = item["Category"]+": "+item["Diagnosis"]+"<span class='removeDDx'>&times;</span>";
           ddxDiv.appendChild(ddxDivItem);
 

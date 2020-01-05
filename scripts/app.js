@@ -200,4 +200,16 @@ function showCase(details) {
     };
   });
 
+  var gradeBtn = document.getElementById("grade-btn");
+  gradeBtn.onclick = function () {
+    console.log(details["FinalDiagnosis"]);
+    var ddxDiv = document.getElementById("ddx-list");
+    console.log(ddxDiv.children);
+    if (ddxDiv.children[0].className == details["FinalDiagnosis"]) {
+      alert("Good job! You got it! The final diagnosis is "+details['FinalDiagnosis']+".");
+    } else {
+      alert("Take a look at the case again.");
+    }
+  };
+
 } //end showCase
