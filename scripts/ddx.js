@@ -62,12 +62,6 @@ d3.json("data/ddx.json").then(function (ddxList) {
             };
           };
 
-          var statement = document.createElement("div")
-          statement.innerHTML = "DDx: "+item["Diagnosis"];
-          // create <br> element
-          var br = document.createElement('br')
-          document.getElementById('ed-course').append(item["Diagnosis"], br);
-
           //close ddx modal
           ddx.style.display = "none";
         };

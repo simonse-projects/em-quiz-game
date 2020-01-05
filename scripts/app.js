@@ -153,7 +153,7 @@ function showCase(details) {
   });
 
   // patient encounter
-  var ROSList = ["ROSGeneral", "ROSHEENT", "ROSRespiratory", "ROSCardiovascular", "ROSGastrointestinal", "ROSGenitoruinary", "ROSMusculoskeletal", "ROSNeurologic", "ROSBehavioral", "ROSSkin"];
+  var ROSList = ["ROSGeneral", "ROSHEENT", "ROSRespiratory", "ROSGastrointestinal", "ROSGenitoruinary", "ROSMusculoskeletal", "ROSNeurologic", "ROSBehavioral", "ROSSkin"];
   ROSList.forEach(function (item, index) {
     var el = document.getElementById(item);
     // console.log(el);
