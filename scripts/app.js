@@ -60,8 +60,19 @@ d3.json("data/ddx.json").then(function (ddxList) {
           // add to DDx section and summary statements
           var ddxDiv = document.getElementById("ddx-list");
           var ddxDivItem = document.createElement("div");
-          ddxDivItem.innerHTML = item["Category"]+": "+item["Diagnosis"];
-          ddxDiv.append(ddxDivItem);
+          ddxDivItem.innerHTML = item["Category"]+": "+item["Diagnosis"]+"<span class='removeDDx'>&times;</span>";
+          ddxDiv.appendChild(ddxDivItem);
+
+          // remove DDx on click
+          var removeDDxBtns = document.getElementsByClassName('removeDDx');
+          // console.log(removeDDxBtns);
+          for (var i = 0; i < removeDDxBtns.length; i++) {
+            removeDDxBtns[i].onclick = function () {
+              var DDx = this.parentNode;
+              DDx.parentNode.removeChild(DDx);
+
+            };
+          };
 
           var statement = document.createElement("div")
           statement.innerHTML = "DDx: "+item["Diagnosis"];
@@ -72,6 +83,7 @@ d3.json("data/ddx.json").then(function (ddxList) {
           //close ddx modal
           ddx.style.display = "none";
         };
+
         row.appendChild(diagBtn);
       }
     });
