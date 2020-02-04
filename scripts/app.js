@@ -220,14 +220,22 @@ function showCase(details) {
       finalDiagnosis.removeChild(finalDiagnosis.firstChild);
     }
 
-    console.log(ddxDiv.children[0].className);
     // loop through cases to build list
     for (var i = 0; i < ddxDiv.children.length; i++) {
       var ddxItem = finalDiagnosis.appendChild(document.createElement("option"));
-      console.log(ddxDiv.children[i].className);
+      // console.log(ddxDiv.children[i].className);
       ddxItem.value = ddxDiv.children[i].className;
       ddxItem.innerHTML = ddxDiv.children[i].className;
     }
+
+    var form = document.querySelector('form');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+
+
+    });
+
   }
 
   // When the user clicks on (x), close the modal

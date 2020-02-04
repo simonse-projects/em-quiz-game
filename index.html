@@ -238,12 +238,15 @@
 
         <select class="form-control" id="final-diagnosis">
         </select>
-        <button type="button" class="collapsible">Review of Systems</button>
-        <div class="content">
-          <div class="row">
-            <button type="button" class="button-primary" id="ROSGeneralBtn">
-              General
-            </button>
+        <hr>
+        <em>Disposition</em>
+        <form id="disposition-select">
+         <input type="checkbox" value="home"> Send Home<br>
+         <input type="checkbox" value="observation"> Admit for Observation<br>
+         <input type="checkbox" value="floor"> Admit to the Floor<br>
+         <input type="checkbox" value="ICU"> Admit to the ICU<br>
+         <input type="submit" value="Submit">
+        </form>
       </div>
     </div>
 
