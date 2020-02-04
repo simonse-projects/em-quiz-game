@@ -239,7 +239,7 @@ function showCase(details) {
   }
 
   // When the user clicks on (x), close the modal
-  closeBtn[0].onclick = function() {
+  closeBtn[3].onclick = function() {
     dispositionModal.style.display = "none";
   }
 
