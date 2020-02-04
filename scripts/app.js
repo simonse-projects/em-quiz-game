@@ -200,16 +200,55 @@ function showCase(details) {
     };
   });
 
-  var gradeBtn = document.getElementById("disposition-btn");
-  gradeBtn.onclick = function () {
-    console.log(details["FinalDiagnosis"]);
+  var dispBtn = document.getElementById("disposition-btn");
+  // Get the modal
+  var dispositionModal = document.getElementById("disposition");
+
+
+  dispBtn.onclick = function () {
+    // console.log(details["FinalDiagnosis"]);
+    // console.log(ddxDiv.children);
+
+    // When the user clicks on the button, open the modal
+    dispositionModal.style.display = "block";
+
+    var finalDiagnosis = document.getElementById("final-diagnosis");
     var ddxDiv = document.getElementById("ddx-list");
-    console.log(ddxDiv.children);
-    if (ddxDiv.children[0].className == details["FinalDiagnosis"]) {
-      alert("Good job! You got it! The final diagnosis is "+details['FinalDiagnosis']+".");
-    } else {
-      alert("Take a look at the case again.");
+
+    // empty DDx list
+    while(finalDiagnosis.firstChild) {
+      finalDiagnosis.removeChild(finalDiagnosis.firstChild);
     }
-  };
+
+    console.log(ddxDiv.children[0].className);
+    // loop through cases to build list
+    for (var i = 0; i < ddxDiv.children.length; i++) {
+      var ddxItem = finalDiagnosis.appendChild(document.createElement("option"));
+      console.log(ddxDiv.children[i].className);
+      ddxItem.value = ddxDiv.children[i].className;
+      ddxItem.innerHTML = ddxDiv.children[i].className;
+    }
+  }
+
+  // When the user clicks on (x), close the modal
+  closeBtn[0].onclick = function() {
+    dispositionModal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == dispositionModal) {
+      dispositionModal.style.display = "none";
+    }
+  }
+
+
+
+    // if (ddxDiv.children[0].className == details["FinalDiagnosis"]) {
+    //   alert("Good job! You got it! The final diagnosis is "+details['FinalDiagnosis']+".");
+    // } else {
+    //   alert("Take a look at the case again.");
+    // }
+
 
 } //end showCase
