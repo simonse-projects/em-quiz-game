@@ -200,7 +200,7 @@ function showCase(details) {
     };
   });
 
-  var gradeBtn = document.getElementById("grade-btn");
+  var gradeBtn = document.getElementById("disposition-btn");
   gradeBtn.onclick = function () {
     console.log(details["FinalDiagnosis"]);
     var ddxDiv = document.getElementById("ddx-list");
