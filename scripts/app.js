@@ -249,6 +249,9 @@ function showCase(details) {
     form.addEventListener('submit', e => {
       e.preventDefault();
 
+      var checkedValue = document.querySelector('input[name="disposition"]:checked').value;
+      console.log(checkedValue);
+
       // add player's choices
       document.getElementById("player-hpi").append("HPI: "+hpiFinal.innerHTML);
       document.getElementById("player-edcourse").append("ED Course:");
