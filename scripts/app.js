@@ -137,6 +137,10 @@ function displayCases(cases) {
 } //end displayCases
 
 function showCase(details) {
+
+  // empty MDM
+  document.getElementById("MDM").value = "";
+
   document.getElementById("patient-name").append(details["PatientName"]);
   // console.log(details["History1"] + details["History2"]);
   document.getElementById("HPI").append(details["History1"] +" "+ details["History2"]);
@@ -165,10 +169,10 @@ function showCase(details) {
       el.innerHTML = item+": "+details[item];
       el.style.display = "inline";
       el.style["padding-left"] = "10px";
-      var statement = document.createElement("div")
+      var statement = document.createElement("div");
       statement.innerHTML = item+": "+details[item];
       // create <br> element
-      var br = document.createElement('br')
+      var br = document.createElement('br');
       document.getElementById('ed-course').append("Performed "+item, br);
 
       //close patient-enc modal
@@ -203,6 +207,8 @@ function showCase(details) {
   var dispBtn = document.getElementById("disposition-btn");
   // Get the modal
   var dispositionModal = document.getElementById("disposition");
+  var form = document.querySelector('form');
+  var gradingDiv = document.getElementById("grading");
 
 
   dispBtn.onclick = function () {
@@ -214,9 +220,6 @@ function showCase(details) {
 
     var finalDiagnosis = document.getElementById("final-diagnosis");
     var ddxDiv = document.getElementById("ddx-list");
-    var form = document.querySelector('form');
-
-    form.reset();
 
     // empty DDx list
     while(finalDiagnosis.firstChild) {
@@ -233,14 +236,28 @@ function showCase(details) {
 
     // intended performance
     //details["FinalDiagnosis"]
+
+    var hpiFinal = document.getElementById("HPI");
+    var edCourseFinal = document.getElementById("ed-course");
+    var mdmFinal = document.getElementById("MDM");
+
     var header = document.getElementById("patient-name-age")
     header.append(details["PatientName"]);
     header.append(" - "+details["Age"]);
     header.append(details["Gender"]);
 
-
     form.addEventListener('submit', e => {
       e.preventDefault();
+
+      // add player's choices
+      document.getElementById("player-hpi").append("HPI: "+hpiFinal.innerHTML);
+      document.getElementById("player-edcourse").append("ED Course:");
+      document.getElementById("player-edcourse").append(edCourseFinal);
+      document.getElementById("player-edcourse").append("MDM:");
+      document.getElementById("player-edcourse").append(mdmFinal.value);
+      console.log(document.getElementById("player-edcourse"));
+
+      gradingDiv.style.display = "block";
 
     });
 
@@ -249,12 +266,26 @@ function showCase(details) {
   // When the user clicks on (x), close the modal
   closeBtn[3].onclick = function() {
     dispositionModal.style.display = "none";
+    form.reset();
+    gradingDiv.style.display = "none";
+    document.getElementById("player-hpi").innerHTML = "";
+    while(document.getElementById("player-edcourse").firstChild) {
+      document.getElementById("player-edcourse").removeChild(document.getElementById("player-edcourse").firstChild);
+    }
+    console.log(document.getElementById("player-edcourse"));
   }
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == dispositionModal) {
       dispositionModal.style.display = "none";
+      form.reset();
+      gradingDiv.style.display = "none";
+      document.getElementById("player-hpi").innerHTML = "";
+      while(document.getElementById("player-edcourse").firstChild) {
+        document.getElementById("player-edcourse").removeChild(document.getElementById("player-edcourse").firstChild);
+      }
+      console.log(document.getElementById("player-edcourse"));
     }
   }
 

@@ -248,45 +248,81 @@
          <input type="submit" value="Submit">
         </form>
 
-        <div id="grading">
+        <div id="grading" style="display:none">
 
           <strong>Performance</strong> - <span id="patient-name-age"></span>
           <div class="row">
             <div class="six columns">
               <h6>Your Performance</h6>
-              <button type="button" class="collapsible" id="player-vitals">
+              <button type="button" class="collapsible" id="player-vitals-btn">
                 Vitals
               </button>
-              <button type="button" class="collapsible" id="player-hpi">
+                <div class="content">
+
+                </div>
+              <button type="button" class="collapsible" id="player-hpi-btn">
                 HPI / ROS / PE
               </button>
+                <div class="content" id="player-hpi">
+
+                </div>
               <button type="button" class="collapsible" id="player-labs">
                 Labs / Imaging
               </button>
-              <button type="button" class="collapsible" id="player-ddx">
+                <div class="content">
+
+                </div>
+              <button type="button" class="collapsible active" id="player-ddx">
                 Differential Diagnoses
               </button>
-              <button type="button" class="collapsible" id="player-edcourse">
+                <div class="content" style="display:block">
+
+                </div>
+              <button type="button" class="collapsible active" id="player-edcourse-btn">
                 ED Course / MDM / Disposition
               </button>
+                <div class="content" style="display:block" id="player-edcourse">
+
+                </div>
             </div>
             <div class="six columns">
               <h6>Intended Performance</h6>
               <button type="button" class="collapsible" id="solution-vitals">
                 Vitals
               </button>
+                <div class="content">
+
+                </div>
               <button type="button" class="collapsible" id="solution-hpi">
                 HPI / ROS / PE
               </button>
+                <div class="content">
+
+                </div>
               <button type="button" class="collapsible" id="solution-labs">
                 Labs / Imaging
               </button>
-              <button type="button" class="collapsible" id="solution-ddx">
+                <div class="content">
+
+                </div>
+              <button type="button" class="collapsible active" id="solution-ddx">
                 Differential Diagnoses
               </button>
-              <button type="button" class="collapsible" id="solution-edcourse">
+                <div class="content" style="display:block">
+
+                </div>
+              <button type="button" class="collapsible active" id="solution-edcourse">
                 ED Course / MDM / Disposition
               </button>
+                <div class="content" style="display:block">
+
+                </div>
+              <button type="button" class="collapsible active" id="solution-discussion">
+                Discussion
+              </button>
+                <div class="content" style="display:block">
+
+                </div>
             </div>
           </div>
 
