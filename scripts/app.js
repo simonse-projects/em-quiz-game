@@ -214,13 +214,16 @@ function showCase(details) {
 
     var finalDiagnosis = document.getElementById("final-diagnosis");
     var ddxDiv = document.getElementById("ddx-list");
+    var form = document.querySelector('form');
+
+    form.reset();
 
     // empty DDx list
     while(finalDiagnosis.firstChild) {
       finalDiagnosis.removeChild(finalDiagnosis.firstChild);
     }
 
-    // loop through cases to build list
+    // loop through ddx to build list
     for (var i = 0; i < ddxDiv.children.length; i++) {
       var ddxItem = finalDiagnosis.appendChild(document.createElement("option"));
       // console.log(ddxDiv.children[i].className);
@@ -228,11 +231,16 @@ function showCase(details) {
       ddxItem.innerHTML = ddxDiv.children[i].className;
     }
 
-    var form = document.querySelector('form');
+    // intended performance
+    //details["FinalDiagnosis"]
+    var header = document.getElementById("patient-name-age")
+    header.append(details["PatientName"]);
+    header.append(" - "+details["Age"]);
+    header.append(details["Gender"]);
+
+
     form.addEventListener('submit', e => {
       e.preventDefault();
-
-
 
     });
 
