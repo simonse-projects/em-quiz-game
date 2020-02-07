@@ -238,6 +238,7 @@ function showCase(details) {
     //details["FinalDiagnosis"]
 
     var hpiFinal = document.getElementById("HPI");
+    var rosFinal = document.getElementById("ROS");
     var edCourseFinal = document.getElementById("ed-course");
     var mdmFinal = document.getElementById("MDM");
 
@@ -251,14 +252,16 @@ function showCase(details) {
 
       var checkedValue = document.querySelector('input[name="disposition"]:checked').value;
       console.log(checkedValue);
+      console.log(document.querySelector('input[name="disposition"]:checked'));
 
       // add player's choices
       document.getElementById("player-hpi").append("HPI: "+hpiFinal.innerHTML);
-      document.getElementById("player-edcourse").append("ED Course:");
-      document.getElementById("player-edcourse").append(edCourseFinal);
-      document.getElementById("player-edcourse").append("MDM:");
-      document.getElementById("player-edcourse").append(mdmFinal.value);
-      console.log(document.getElementById("player-edcourse"));
+      document.getElementById("player-hpi").append("ROS: "+rosFinal.innerHTML);
+
+      document.getElementById("ed-course-content").append(edCourseFinal);
+      document.getElementById("mdm-content").append(mdmFinal.value);
+      document.getElementById("disposition-content").append(checkedValue);
+      // console.log(document.getElementById("player-edcourse"));
 
       gradingDiv.style.display = "block";
 
@@ -271,11 +274,14 @@ function showCase(details) {
     dispositionModal.style.display = "none";
     form.reset();
     gradingDiv.style.display = "none";
+
+    document.getElementById("patient-name-age").innerHTML = "";
+
     document.getElementById("player-hpi").innerHTML = "";
-    while(document.getElementById("player-edcourse").firstChild) {
-      document.getElementById("player-edcourse").removeChild(document.getElementById("player-edcourse").firstChild);
-    }
-    console.log(document.getElementById("player-edcourse"));
+    document.getElementById("ed-course-content").innerHTML = "";
+    document.getElementById("mdm-content").innerHTML = "";
+    document.getElementById("disposition-content").innerHTML = "";
+    // console.log(document.getElementById("player-edcourse"));
   }
 
   // When the user clicks anywhere outside of the modal, close it
@@ -284,11 +290,14 @@ function showCase(details) {
       dispositionModal.style.display = "none";
       form.reset();
       gradingDiv.style.display = "none";
+
+      document.getElementById("patient-name-age").innerHTML = "";
+
       document.getElementById("player-hpi").innerHTML = "";
-      while(document.getElementById("player-edcourse").firstChild) {
-        document.getElementById("player-edcourse").removeChild(document.getElementById("player-edcourse").firstChild);
-      }
-      console.log(document.getElementById("player-edcourse"));
+      document.getElementById("ed-course-content").innerHTML = "";
+      document.getElementById("mdm-content").innerHTML = "";
+      document.getElementById("disposition-content").innerHTML = "";
+      // console.log(document.getElementById("player-edcourse"));
     }
   }
 
