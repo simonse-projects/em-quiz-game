@@ -236,17 +236,19 @@
           </h5>
         </div>
 
-        <select class="form-control" id="final-diagnosis">
-        </select>
-        <hr>
-        <em>Disposition</em>
-        <form id="disposition-select">
-         <input type="radio" name="disposition" value="home"> Send Home<br>
-         <input type="radio" name="disposition" value="observation"> Admit for Observation<br>
-         <input type="radio" name="disposition" value="floor"> Admit to the Floor<br>
-         <input type="radio" name="disposition" value="ICU"> Admit to the ICU<br>
-         <input type="submit" value="Submit">
-        </form>
+        <div id="select-diagnosis">
+          <select class="form-control" id="final-diagnosis">
+          </select>
+          <hr>
+          <em>Disposition</em>
+          <form id="disposition-select">
+           <input type="radio" name="disposition" value="home"> Send Home<br>
+           <input type="radio" name="disposition" value="observation"> Admit for Observation<br>
+           <input type="radio" name="disposition" value="floor"> Admit to the Floor<br>
+           <input type="radio" name="disposition" value="ICU"> Admit to the ICU<br>
+           <input type="submit" value="Submit">
+          </form>
+        </div>
 
         <div id="grading" style="display:none">
 
@@ -296,10 +298,10 @@
                     MDM:
                   </div>
                   <div id="mdm-content"></div>
-                  <div id="disposition-header">
+                  <span id="disposition-header">
                     Disposition:
-                  </div>
-                  <div id="disposition-content"></div>
+                  </span>
+                  <span id="disposition-content"></span>
                 </div>
             </div>
             <div class="six columns">

@@ -217,6 +217,7 @@ function showCase(details) {
 
     // When the user clicks on the button, open the modal
     dispositionModal.style.display = "block";
+    document.getElementById("select-diagnosis").style.display = "block";
 
     var finalDiagnosis = document.getElementById("final-diagnosis");
     var ddxDiv = document.getElementById("ddx-list");
@@ -249,6 +250,9 @@ function showCase(details) {
 
     form.addEventListener('submit', e => {
       e.preventDefault();
+
+      // hide form
+      document.getElementById("select-diagnosis").style.display = "none";
 
       var checkedValue = document.querySelector('input[name="disposition"]:checked').value;
       console.log(checkedValue);
