@@ -118,3 +118,25 @@ hr {
 .removeDDx {
   cursor: pointer;
 }
+
+#vitals {
+  background-color: black;
+}
+
+#VSPulse {
+  color: green;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#VSO2Sat {
+  color: orange;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#BP {
+  color: red;
+  font-weight: bold;
+  font-size: 2em;
+}
