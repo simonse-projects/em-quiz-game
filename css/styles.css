@@ -121,22 +121,32 @@ hr {
 
 #vitals {
   background-color: black;
+  font-weight: bold;
+  font-size: 2em;
 }
 
 #VSPulse {
   color: green;
-  font-weight: bold;
-  font-size: 2em;
 }
 
 #VSO2Sat {
   color: orange;
-  font-weight: bold;
-  font-size: 2em;
 }
 
 #BP {
   color: red;
-  font-weight: bold;
-  font-size: 2em;
+}
+
+#RR {
+  color: blue;
+}
+
+#VSTemperature {
+  color: gray;
+}
+
+.label {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 0.5em;
 }

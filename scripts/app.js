@@ -145,7 +145,7 @@ function showCase(details) {
   // console.log(details["History1"] + details["History2"]);
   document.getElementById("HPI").append(details["History1"] +" "+ details["History2"]);
   var VSRhythm = document.getElementById("VSRhythm");
-  VSRhythm.innerHTML = "<img src='images/VRhythm_NSR.png' width=50%>"
+  VSRhythm.innerHTML = "<img src='images/VRhythm_NSR.png' width=70%>"
 
   // list of vitals
   var vitalsList = ["VSPulse", "VSSBP", "VSDBP", "VSO2Sat", "VSTemperature", "VSRespiratoryRate"];
