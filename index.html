@@ -73,16 +73,24 @@
           </div>
           <div class="six columns border">
             <h5>Vitals</h5>
-            <section id="vitals">
-              <span id="VSRhythm"></span>
-              <span id="VSPulse"></span><br>
-              <img src="images/V_o2_normal.png" alt="O2 Sat%" width=70%>
-              <img src="images/VO2.png" alt="O2 Sat%" width=10%>
-              <span id="VSO2Sat"></span><br>
-              <span id="BP"><span class="label">BP</span> <span id="VSSBP"></span>/<span id="VSDBP"></span></span>
-              <spna id="RR"><span class="label">RR</span> <span id="VSRespiratoryRate"></span></span>  
-              <span id="VSTemperature"></span>
-            </section>
+            <div class="row" id="vitals">
+              <div class="twelve columns">
+                <span id="VSRhythm"></span>
+                <span class="u-pull-right" style="margin-right:15px;" id="VSPulse"></span>
+              </div>
+              <div class="twelve columns">
+                <img src="images/V_o2_normal.png" alt="O2 Sat%" width=70%>
+                <img src="images/VO2.png" alt="O2 Sat%" width=10%>
+                <span class="u-pull-right" style="margin-right:15px;" id="VSO2Sat"></span>
+              </div>
+              <div class="seven columns">
+                <span id="BP"><span class="label">BP</span> <span id="VSSBP"></span>/<span id="VSDBP"></span></span>
+              </div>
+              <div class="three columns u-pull-right" style="line-height:0.7em;">
+                <span id="RR"><span class="label">RR</span> <span id="VSRespiratoryRate"></span></span><br>
+                <span id="VSTemperature"></span>
+              </div>
+            </div>
             <hr>
             <h5>PE</h5>
             <div id="PE">

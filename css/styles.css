@@ -139,10 +139,12 @@ hr {
 
 #RR {
   color: blue;
+  font-size: 0.75em;
 }
 
 #VSTemperature {
   color: gray;
+  font-size: 0.75em;
 }
 
 .label {
