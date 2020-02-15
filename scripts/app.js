@@ -210,6 +210,8 @@ function showCase(details) {
   var form = document.querySelector('form');
   var gradingDiv = document.getElementById("grading");
 
+  document.getElementById("solution-ddx").innerHTML = details["FinalDiagnosis"];
+
 
   dispBtn.onclick = function () {
     // console.log(details["FinalDiagnosis"]);
