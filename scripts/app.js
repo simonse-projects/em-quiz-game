@@ -222,63 +222,64 @@ function showCase(details) {
       ddxItem.innerHTML = ddxDiv.children[i].className;
     }
 
-    // var hpiFinal = document.getElementById("HPI");
-    // var rosFinal = document.getElementById("ROS");
-    // var edCourseFinal = document.getElementById("ed-course");
-    // var mdmFinal = document.getElementById("MDM");
-
     var header = document.getElementById("patient-name-age")
     header.append(details["PatientName"]);
     header.append(" - "+details["Age"]);
     header.append(details["Gender"]);
 
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-
-      // hide form
-      document.getElementById("select-diagnosis").style.display = "none";
-
-      var checkedValue = document.querySelector('input[name="disposition"]:checked').value;
-      console.log(checkedValue);
-      console.log(document.querySelector('input[name="disposition"]:checked'));
-
-      var button = document.createElement("button");
-      button.className = "collapsible";
-      var div = document.createElement("div");
-      div.className = "content"
-
-      var hpirosBtn = button.cloneNode();
-      playerDiv.appendChild(hpirosBtn).textContent = "HPI / ROS";
-      var playerHPIROS = div.cloneNode();
-      playerDiv.appendChild(playerHPIROS);
-
-      var vitalsBtn = button.cloneNode();
-      playerDiv.appendChild(vitalsBtn).textContent = "Vitals";
-      var playerVitals = div.cloneNode();
-      playerDiv.appendChild(playerVitals);
-
-      var peBtn = button.cloneNode();
-      playerDiv.appendChild(peBtn).textContent = "PE";
-      var playerPE = div.cloneNode();
-      playerDiv.appendChild(playerPE);
-
-
-      // add player's choices
-      // document.getElementById("player-hpi").append("HPI: "+hpiFinal.innerHTML);
-      // document.getElementById("player-hpi").append("ROS: "+rosFinal.innerHTML);
-      //
-      // document.getElementById("ed-course-content").append(edCourseFinal);
-      // document.getElementById("mdm-content").append(mdmFinal.value);
-      // document.getElementById("disposition-content").append(checkedValue);
-      // console.log(document.getElementById("player-edcourse"));
-
-      collapsibleSections();
-
-      gradingDiv.style.display = "block";
-
-    });
-
   }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    console.log("click");
+
+    // hide form
+    document.getElementById("select-diagnosis").style.display = "none";
+
+    var checkedValue = document.querySelector('input[name="disposition"]:checked').value;
+    console.log(checkedValue);
+    console.log(document.querySelector('input[name="disposition"]:checked'));
+
+    var hpiFinal = document.getElementById("HPI");
+    var rosFinal = document.getElementById("ROS");
+    var edCourseFinal = document.getElementById("ed-course");
+    var mdmFinal = document.getElementById("MDM");
+
+    var button = document.createElement("button");
+    button.className = "collapsible";
+    var div = document.createElement("div");
+    div.className = "content"
+
+    var hpirosBtn = button.cloneNode();
+    playerDiv.appendChild(hpirosBtn).textContent = "HPI / ROS";
+    var playerHPIROS = div.cloneNode();
+    playerDiv.appendChild(playerHPIROS);
+
+    var vitalsBtn = button.cloneNode();
+    playerDiv.appendChild(vitalsBtn).textContent = "Vitals";
+    var playerVitals = div.cloneNode();
+    playerDiv.appendChild(playerVitals);
+
+    var peBtn = button.cloneNode();
+    playerDiv.appendChild(peBtn).textContent = "PE";
+    var playerPE = div.cloneNode();
+    playerDiv.appendChild(playerPE);
+
+
+    // add player's choices
+    // document.getElementById("player-hpi").append("HPI: "+hpiFinal.innerHTML);
+    // document.getElementById("player-hpi").append("ROS: "+rosFinal.innerHTML);
+    //
+    // document.getElementById("ed-course-content").append(edCourseFinal);
+    // document.getElementById("mdm-content").append(mdmFinal.value);
+    // document.getElementById("disposition-content").append(checkedValue);
+    // console.log(document.getElementById("player-edcourse"));
+
+    collapsibleSections();
+
+    gradingDiv.style.display = "block";
+
+  });
 
   // When the user clicks on (x), close the modal
   closeBtn[3].onclick = function() {
