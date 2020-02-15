@@ -231,14 +231,16 @@ function showCase(details) {
 
   form.addEventListener('submit', e => {
     e.preventDefault();
-    console.log("click");
+
+    var finalDiagnosis = document.getElementById("final-diagnosis");
+    console.log(finalDiagnosis.value);
 
     // hide form
     document.getElementById("select-diagnosis").style.display = "none";
 
     var checkedValue = document.querySelector('input[name="disposition"]:checked').value;
-    console.log(checkedValue);
-    console.log(document.querySelector('input[name="disposition"]:checked'));
+    // console.log(checkedValue);
+    // console.log(document.querySelector('input[name="disposition"]:checked'));
 
     var hpiFinal = document.getElementById("HPI");
     var rosFinal = document.getElementById("ROS");
@@ -248,12 +250,17 @@ function showCase(details) {
     var button = document.createElement("button");
     button.className = "collapsible";
     var div = document.createElement("div");
-    div.className = "content"
+    div.className = "content";
+
+    playerDiv.appendChild(document.createElement("h6")).textContent = "Your Performance";
 
     var hpirosBtn = button.cloneNode();
     playerDiv.appendChild(hpirosBtn).textContent = "HPI / ROS";
     var playerHPIROS = div.cloneNode();
     playerDiv.appendChild(playerHPIROS);
+    hpirosContent = "HPI: "+hpiFinal.innerHTML+"<br>";
+    hpirosContent += "ROS: "+rosFinal.innerHTML;
+    playerHPIROS.innerHTML = hpirosContent;
 
     var vitalsBtn = button.cloneNode();
     playerDiv.appendChild(vitalsBtn).textContent = "Vitals";
@@ -265,15 +272,32 @@ function showCase(details) {
     var playerPE = div.cloneNode();
     playerDiv.appendChild(playerPE);
 
+    var labsBtn = button.cloneNode();
+    playerDiv.appendChild(labsBtn).textContent = "Labs / Imaging";
+    var playerLabs = div.cloneNode();
+    playerDiv.appendChild(playerLabs);
 
-    // add player's choices
-    // document.getElementById("player-hpi").append("HPI: "+hpiFinal.innerHTML);
-    // document.getElementById("player-hpi").append("ROS: "+rosFinal.innerHTML);
-    //
-    // document.getElementById("ed-course-content").append(edCourseFinal);
-    // document.getElementById("mdm-content").append(mdmFinal.value);
-    // document.getElementById("disposition-content").append(checkedValue);
-    // console.log(document.getElementById("player-edcourse"));
+    var ddxBtn = button.cloneNode();
+    ddxBtn.className = "collapsible active";
+    playerDiv.appendChild(ddxBtn).textContent = "Differential Diagnoses";
+    var playerDDx = div.cloneNode();
+    playerDiv.appendChild(playerDDx);
+    playerDDx.setAttribute("style","display:block");
+    playerDDx.innerHTML = finalDiagnosis.value;
+    if (finalDiagnosis.value == details['FinalDiagnosis']) {
+      playerDDx.className = playerDDx.classList + " correct";
+    } else {
+      playerDDx.className = playerDDx.classList + " incorrect";
+    }
+
+    var edCourseBtn = button.cloneNode();
+    edCourseBtn.className = "collapsible active";
+    playerDiv.appendChild(edCourseBtn).textContent = "ED Course / MDM / Disposition";
+    var playerEDCourse = div.cloneNode();
+    playerDiv.appendChild(playerEDCourse);
+    edMDMDisp = "ED Course: " + edCourseFinal.innerHTML + "<br>" + "MDM: " + mdmFinal.value + "<br>" + checkedValue;
+    playerEDCourse.innerHTML = edMDMDisp;
+    playerEDCourse.setAttribute("style","display:block");
 
     collapsibleSections();
 
@@ -294,11 +318,6 @@ function showCase(details) {
       playerDiv.removeChild(playerDiv.firstChild);
     }
 
-    // document.getElementById("player-hpi").innerHTML = "";
-    // document.getElementById("ed-course-content").innerHTML = "";
-    // document.getElementById("mdm-content").innerHTML = "";
-    // document.getElementById("disposition-content").innerHTML = "";
-    // console.log(document.getElementById("player-edcourse"));
   }
 
   // When the user clicks anywhere outside of the modal, close it
@@ -315,21 +334,8 @@ function showCase(details) {
         playerDiv.removeChild(playerDiv.firstChild);
       }
 
-      // document.getElementById("player-hpi").innerHTML = "";
-      // document.getElementById("ed-course-content").innerHTML = "";
-      // document.getElementById("mdm-content").innerHTML = "";
-      // document.getElementById("disposition-content").innerHTML = "";
-      // console.log(document.getElementById("player-edcourse"));
     }
   }
-
-
-
-    // if (ddxDiv.children[0].className == details["FinalDiagnosis"]) {
-    //   alert("Good job! You got it! The final diagnosis is "+details['FinalDiagnosis']+".");
-    // } else {
-    //   alert("Take a look at the case again.");
-    // }
 
 
 } //end showCase

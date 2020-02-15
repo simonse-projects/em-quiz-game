@@ -153,3 +153,12 @@ hr {
   text-orientation: upright;
   font-size: 0.5em;
 }
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
