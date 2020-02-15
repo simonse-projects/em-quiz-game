@@ -11,24 +11,7 @@ page3.style.display = 'none';
 var closeBtn = document.getElementsByClassName("close");
 // console.log(closeBtn);
 
-// collapsible areas
-var coll = document.getElementsByClassName("collapsible");
-// console.log(coll);
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    // console.log("clicked");
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-
+collapsibleSections();
 
 
 // Get the modal
@@ -212,6 +195,8 @@ function showCase(details) {
 
   document.getElementById("solution-ddx").innerHTML = details["FinalDiagnosis"];
 
+  var playerDiv = document.getElementById("player-performance");
+
 
   dispBtn.onclick = function () {
     // console.log(details["FinalDiagnosis"]);
@@ -237,13 +222,10 @@ function showCase(details) {
       ddxItem.innerHTML = ddxDiv.children[i].className;
     }
 
-    // intended performance
-    //details["FinalDiagnosis"]
-
-    var hpiFinal = document.getElementById("HPI");
-    var rosFinal = document.getElementById("ROS");
-    var edCourseFinal = document.getElementById("ed-course");
-    var mdmFinal = document.getElementById("MDM");
+    // var hpiFinal = document.getElementById("HPI");
+    // var rosFinal = document.getElementById("ROS");
+    // var edCourseFinal = document.getElementById("ed-course");
+    // var mdmFinal = document.getElementById("MDM");
 
     var header = document.getElementById("patient-name-age")
     header.append(details["PatientName"]);
@@ -260,14 +242,37 @@ function showCase(details) {
       console.log(checkedValue);
       console.log(document.querySelector('input[name="disposition"]:checked'));
 
-      // add player's choices
-      document.getElementById("player-hpi").append("HPI: "+hpiFinal.innerHTML);
-      document.getElementById("player-hpi").append("ROS: "+rosFinal.innerHTML);
+      var button = document.createElement("button");
+      button.className = "collapsible";
+      var div = document.createElement("div");
+      div.className = "content"
 
-      document.getElementById("ed-course-content").append(edCourseFinal);
-      document.getElementById("mdm-content").append(mdmFinal.value);
-      document.getElementById("disposition-content").append(checkedValue);
+      var hpirosBtn = button.cloneNode();
+      playerDiv.appendChild(hpirosBtn).textContent = "HPI / ROS";
+      var playerHPIROS = div.cloneNode();
+      playerDiv.appendChild(playerHPIROS);
+
+      var vitalsBtn = button.cloneNode();
+      playerDiv.appendChild(vitalsBtn).textContent = "Vitals";
+      var playerVitals = div.cloneNode();
+      playerDiv.appendChild(playerVitals);
+
+      var peBtn = button.cloneNode();
+      playerDiv.appendChild(peBtn).textContent = "PE";
+      var playerPE = div.cloneNode();
+      playerDiv.appendChild(playerPE);
+
+
+      // add player's choices
+      // document.getElementById("player-hpi").append("HPI: "+hpiFinal.innerHTML);
+      // document.getElementById("player-hpi").append("ROS: "+rosFinal.innerHTML);
+      //
+      // document.getElementById("ed-course-content").append(edCourseFinal);
+      // document.getElementById("mdm-content").append(mdmFinal.value);
+      // document.getElementById("disposition-content").append(checkedValue);
       // console.log(document.getElementById("player-edcourse"));
+
+      collapsibleSections();
 
       gradingDiv.style.display = "block";
 
@@ -283,10 +288,15 @@ function showCase(details) {
 
     document.getElementById("patient-name-age").innerHTML = "";
 
-    document.getElementById("player-hpi").innerHTML = "";
-    document.getElementById("ed-course-content").innerHTML = "";
-    document.getElementById("mdm-content").innerHTML = "";
-    document.getElementById("disposition-content").innerHTML = "";
+    // empty grading list
+    while(playerDiv.firstChild) {
+      playerDiv.removeChild(playerDiv.firstChild);
+    }
+
+    // document.getElementById("player-hpi").innerHTML = "";
+    // document.getElementById("ed-course-content").innerHTML = "";
+    // document.getElementById("mdm-content").innerHTML = "";
+    // document.getElementById("disposition-content").innerHTML = "";
     // console.log(document.getElementById("player-edcourse"));
   }
 
@@ -299,10 +309,15 @@ function showCase(details) {
 
       document.getElementById("patient-name-age").innerHTML = "";
 
-      document.getElementById("player-hpi").innerHTML = "";
-      document.getElementById("ed-course-content").innerHTML = "";
-      document.getElementById("mdm-content").innerHTML = "";
-      document.getElementById("disposition-content").innerHTML = "";
+      // empty grading list
+      while(playerDiv.firstChild) {
+        playerDiv.removeChild(playerDiv.firstChild);
+      }
+
+      // document.getElementById("player-hpi").innerHTML = "";
+      // document.getElementById("ed-course-content").innerHTML = "";
+      // document.getElementById("mdm-content").innerHTML = "";
+      // document.getElementById("disposition-content").innerHTML = "";
       // console.log(document.getElementById("player-edcourse"));
     }
   }
@@ -317,3 +332,23 @@ function showCase(details) {
 
 
 } //end showCase
+
+function collapsibleSections() {
+  // collapsible areas
+  var coll = document.getElementsByClassName("collapsible");
+  // console.log(coll);
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      // console.log("clicked");
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+}
