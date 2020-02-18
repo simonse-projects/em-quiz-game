@@ -244,6 +244,7 @@ function showCase(details) {
 
     var hpiFinal = document.getElementById("HPI");
     var rosFinal = document.getElementById("ROS");
+    var peFinal = document.getElementById("PE")
     var edCourseFinal = document.getElementById("ed-course");
     var mdmFinal = document.getElementById("MDM");
 
@@ -271,6 +272,7 @@ function showCase(details) {
     playerDiv.appendChild(peBtn).textContent = "PE";
     var playerPE = div.cloneNode();
     playerDiv.appendChild(playerPE);
+    playerPE.innerHTML = peFinal.innerHTML;
 
     var labsBtn = button.cloneNode();
     playerDiv.appendChild(labsBtn).textContent = "Labs / Imaging";
