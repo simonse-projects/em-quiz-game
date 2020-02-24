@@ -124,7 +124,7 @@ function showCase(details) {
   // empty MDM
   document.getElementById("MDM").value = "";
 
-  document.getElementById("patient-name").append(details["PatientName"]);
+  document.getElementById("patient-name").append(details["PatientName"]+" - "+details["Age"]+" "+details["Gender"]);
   // console.log(details["History1"] + details["History2"]);
   document.getElementById("HPI").append(details["History1"] +" "+ details["History2"]);
   var VSRhythm = document.getElementById("VSRhythm");
