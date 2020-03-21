@@ -1,0 +1,821 @@
+[
+  {
+    "ColumnName": "CBC_WBC",
+    "Test": "CBC",
+    "Component": "WBC",
+    "Units": "/mm^2",
+    "Min_Norm": 3200,
+    "Max_Norm": 9800,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CBC_HCT",
+    "Test": "CBC",
+    "Component": "HCT",
+    "Units": "%",
+    "Min_Norm": {"male": 41, "female": 36},
+    "Max_Norm": {"male": 51, "female": 47},
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CBC_HGB",
+    "Test": "CBC",
+    "Component": "HGB",
+    "Units": "g/L",
+    "Min_Norm": {"male": 14, "female": 12},
+    "Max_Norm": {"male": 17, "female": 16},
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CBC_Platelets",
+    "Test": "CBC",
+    "Component": "Platelets",
+    "Units": "x 10^3/mm^3",
+    "Min_Norm": 150,
+    "Max_Norm": 450,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CBCdiff_WBC",
+    "Test": "CBCdiff",
+    "Component": "WBC",
+    "Units": "/mm^2",
+    "Min_Norm": 3200,
+    "Max_Norm": 9800,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CBCdiff_HCT",
+    "Test": "CBCdiff",
+    "Component": "HCT",
+    "Units": "%",
+    "Min_Norm": {"male": 41, "female": 36},
+    "Max_Norm": {"male": 51, "female": 47},
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CBCdiff_HGB",
+    "Test": "CBCdiff",
+    "Component": "HGB",
+    "Units": "g/L",
+    "Min_Norm": {"male": 14, "female": 12},
+    "Max_Norm": {"male": 17, "female": 16},
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CBCdiff_Platelets",
+    "Test": "CBCdiff",
+    "Component": "Platelets",
+    "Units": "x 10^3/mm^3",
+    "Min_Norm": 150,
+    "Max_Norm": 450,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CBCdiff_MCV",
+    "Test": "CBCdiff",
+    "Component": "MCV",
+    "Units": "fL",
+    "Min_Norm": 80,
+    "Max_Norm": 100,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CBCdiff_MCH",
+    "Test": "CBCdiff",
+    "Component": "MCH",
+    "Units": "pg",
+    "Min_Norm": 28,
+    "Max_Norm": 32,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CBCdiff_MCHC",
+    "Test": "CBCdiff",
+    "Component": "MCHC",
+    "Units": "g/dL",
+    "Min_Norm": 32,
+    "Max_Norm": 36,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CBCdiff_Neutrophils",
+    "Test": "CBCdiff",
+    "Component": "Neutrophils",
+    "Units": "x 10^9/L",
+    "Min_Norm": 2,
+    "Max_Norm": 8.2,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CBCdiff_Lymphocytes",
+    "Test": "CBCdiff",
+    "Component": "Lymphocytes",
+    "Units": "",
+    "Min_Norm": "",
+    "Max_Norm": "",
+    "Type": "?"
+  },
+  {
+    "ColumnName": "CBCdiff_Monocytes",
+    "Test": "CBCdiff",
+    "Component": "Monocytes",
+    "Units": "x 10^9/L",
+    "Min_Norm": 0.2,
+    "Max_Norm": 0.8,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CBCdiff_Eosinophils",
+    "Test": "CBCdiff",
+    "Component": "Eosinophils",
+    "Units": "x 10^9/L",
+    "Min_Norm": 0,
+    "Max_Norm": 0.5,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CBCdiff_Basophils",
+    "Test": "CBCdiff",
+    "Component": "Basophils",
+    "Units": "x 10^9/L",
+    "Min_Norm": 40,
+    "Max_Norm": 150,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "BMP_Na",
+    "Test": "BMP",
+    "Component": "Na+",
+    "Units": "mmol/L",
+    "Min_Norm": 135,
+    "Max_Norm": 145,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "BMP_K",
+    "Test": "BMP",
+    "Component": "K+",
+    "Units": "mmol/L",
+    "Min_Norm": 3.5,
+    "Max_Norm": 5.1,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "BMP_Cl",
+    "Test": "BMP",
+    "Component": "Cl-",
+    "Units": "mmol/L",
+    "Min_Norm": 96,
+    "Max_Norm": 106,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "BMP_CO2",
+    "Test": "BMP",
+    "Component": "CO2",
+    "Units": "mmol/L",
+    "Min_Norm": 22,
+    "Max_Norm": 29,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "BMP_BUN",
+    "Test": "BMP",
+    "Component": "BUN",
+    "Units": "mg/dL",
+    "Min_Norm": 6,
+    "Max_Norm": 20,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "BMP_Creatinine",
+    "Test": "BMP",
+    "Component": "Creatinine",
+    "Units": "mg/dL",
+    "Min_Norm": 0.5,
+    "Max_Norm": 1.2,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "BMP_Glucose",
+    "Test": "BMP",
+    "Component": "Glucose",
+    "Units": "mg/dL",
+    "Min_Norm": 79,
+    "Max_Norm": 99,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "BMP_Calcium",
+    "Test": "BMP",
+    "Component": "Calcium",
+    "Units": "mg/dL",
+    "Min_Norm": 8.5,
+    "Max_Norm": 10.5,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CMP_Na",
+    "Test": "CMP",
+    "Component": "Na+",
+    "Units": "mmol/L",
+    "Min_Norm": 135,
+    "Max_Norm": 145,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CMP_K",
+    "Test": "CMP",
+    "Component": "K+",
+    "Units": "mmol/L",
+    "Min_Norm": 3.5,
+    "Max_Norm": 5.1,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CMP_Cl",
+    "Test": "CMP",
+    "Component": "Cl-",
+    "Units": "mmol/L",
+    "Min_Norm": 96,
+    "Max_Norm": 106,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CMP_CO2",
+    "Test": "CMP",
+    "Component": "CO2",
+    "Units": "mmol/L",
+    "Min_Norm": 22,
+    "Max_Norm": 29,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CMP_BUN",
+    "Test": "CMP",
+    "Component": "BUN",
+    "Units": "mg/dL",
+    "Min_Norm": 6,
+    "Max_Norm": 20,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CMP_Creatinine",
+    "Test": "CMP",
+    "Component": "Creatinine",
+    "Units": "mg/dL",
+    "Min_Norm": 0.5,
+    "Max_Norm": 1.2,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CMP_Glucose",
+    "Test": "CMP",
+    "Component": "Glucose",
+    "Units": "mg/dL",
+    "Min_Norm": 79,
+    "Max_Norm": 99,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CMP_Calcium",
+    "Test": "CMP",
+    "Component": "Calcium",
+    "Units": "mg/dL",
+    "Min_Norm": 8.5,
+    "Max_Norm": 10.5,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CMP_AST",
+    "Test": "CMP",
+    "Component": "AST",
+    "Units": "IU/L",
+    "Min_Norm": 6,
+    "Max_Norm": 40,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CMP_ALT",
+    "Test": "CMP",
+    "Component": "ALT",
+    "Units": "IU/L",
+    "Min_Norm": 6,
+    "Max_Norm": 40,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CMP_AlkPhos",
+    "Test": "CMP",
+    "Component": "Alk Phos",
+    "Units": "IU/L",
+    "Min_Norm": 30,
+    "Max_Norm": 120,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CMP_TotBili",
+    "Test": "CMP",
+    "Component": "Total Bilirubin",
+    "Units": "mg/dL",
+    "Min_Norm": 0.1,
+    "Max_Norm": 1,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CMP_DirBili",
+    "Test": "CMP",
+    "Component": "Direct Bilirubin",
+    "Units": "mg/dL",
+    "Min_Norm": 0.1,
+    "Max_Norm": 0.4,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "Mg2_Mg2",
+    "Test": "Mg2",
+    "Component": "Mg2+",
+    "Units": "mg/dL",
+    "Min_Norm": 1.7,
+    "Max_Norm": 2.2,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "PO4_PO4",
+    "Test": "PO4",
+    "Component": "PO4--",
+    "Units": "mg/dL",
+    "Min_Norm": 2.5,
+    "Max_Norm": 4.8,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "LFTs_AST",
+    "Test": "LFTs",
+    "Component": "AST",
+    "Units": "IU/L",
+    "Min_Norm": 6,
+    "Max_Norm": 40,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "LFTs_ALT",
+    "Test": "LFTs",
+    "Component": "ALT",
+    "Units": "IU/L",
+    "Min_Norm": 6,
+    "Max_Norm": 40,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "LFTs_AlkPhos",
+    "Test": "LFTs",
+    "Component": "Alk Phos",
+    "Units": "IU/L",
+    "Min_Norm": 30,
+    "Max_Norm": 120,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "LFTs_TotBili",
+    "Test": "LFTs",
+    "Component": "Total Bilirubin",
+    "Units": "mg/dL",
+    "Min_Norm": 0.1,
+    "Max_Norm": 1,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "LFTs_DirBili",
+    "Test": "LFTs",
+    "Component": "Direct Bilirubin",
+    "Units": "mg/dL",
+    "Min_Norm": 0.1,
+    "Max_Norm": 0.4,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "AmyLip_Amylase",
+    "Test": "AmyLip",
+    "Component": "Amylase",
+    "Units": "U/L",
+    "Min_Norm": 0,
+    "Max_Norm": 130,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "AmyLip_Lipase",
+    "Test": "AmyLip",
+    "Component": "Lipase",
+    "Units": "U/L",
+    "Min_Norm": 0,
+    "Max_Norm": 95,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "Troponin_TroponinI",
+    "Test": "Troponin",
+    "Component": "Troponin I",
+    "Units": "ug/L",
+    "Min_Norm": 0,
+    "Max_Norm": 0.5,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "BNP_BNP",
+    "Test": "BNP",
+    "Component": "BNP",
+    "Units": "pg/mL",
+    "Min_Norm": 0,
+    "Max_Norm": 100,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "D-dimer_D-dimer",
+    "Test": "D-dimer",
+    "Component": "D-dimer",
+    "Units": "ug/mL",
+    "Min_Norm": 0,
+    "Max_Norm": 0.5,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "Lactate_Lactate",
+    "Test": "Lactate",
+    "Component": "Lactate",
+    "Units": "mmol/L",
+    "Min_Norm": 0.4,
+    "Max_Norm": 2.3,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CoagulationPanel_PTINR",
+    "Test": "Coagulation Panel",
+    "Component": "PT/INR",
+    "Units": "",
+    "Min_Norm": 0.8,
+    "Max_Norm": 1.2,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "CoagulationPanel_PTT",
+    "Test": "Coagulation Panel",
+    "Component": "PTT",
+    "Units": "seconds",
+    "Min_Norm": 25,
+    "Max_Norm": 35,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "ABG_pH",
+    "Test": "ABG",
+    "Component": "pH",
+    "Units": "",
+    "Min_Norm": 7.37,
+    "Max_Norm": 7.44,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "ABG_paCO2",
+    "Test": "ABG",
+    "Component": "paCO2",
+    "Units": "mm Hg",
+    "Min_Norm": 35,
+    "Max_Norm": 45,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "ABG_paO2",
+    "Test": "ABG",
+    "Component": "paO2",
+    "Units": "mm Hg",
+    "Min_Norm": 80,
+    "Max_Norm": 100,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "ABG_Bicarb",
+    "Test": "ABG",
+    "Component": "Bicarb",
+    "Units": "mEq/L",
+    "Min_Norm": 23,
+    "Max_Norm": 28,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "ABG_O2sat",
+    "Test": "ABG",
+    "Component": "O2 sat",
+    "Units": "%",
+    "Min_Norm": 94,
+    "Max_Norm": 100,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "VBG_pH",
+    "Test": "VBG",
+    "Component": "pH",
+    "Units": "",
+    "Min_Norm": 7.37,
+    "Max_Norm": 7.44,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "VBG_pvCO2",
+    "Test": "VBG",
+    "Component": "pvCO2",
+    "Units": "mm Hg",
+    "Min_Norm": 41,
+    "Max_Norm": 51,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "VBG_pvO2",
+    "Test": "VBG",
+    "Component": "pvO2",
+    "Units": "mm Hg",
+    "Min_Norm": 30,
+    "Max_Norm": 40,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "VBG_Bicarb",
+    "Test": "VBG",
+    "Component": "Bicarb",
+    "Units": "mEq/L",
+    "Min_Norm": 23,
+    "Max_Norm": 28,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "VBG_O2sat",
+    "Test": "VBG",
+    "Component": "O2sat",
+    "Units": "%",
+    "Min_Norm": 94,
+    "Max_Norm": 100,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "b-HCG_b-HCG",
+    "Test": "b-HCG",
+    "Component": "b-HCG",
+    "Units": "IU/I",
+    "Min_Norm": 0,
+    "Max_Norm": 5,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "Urinalysis_Appearance",
+    "Test": "Urinalysis",
+    "Component": "Appearance",
+    "Units": "",
+    "Min_Norm": "Clear",
+    "Max_Norm": "Clear",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "Urinalysis_Color",
+    "Test": "Urinalysis",
+    "Component": "Color",
+    "Units": "",
+    "Min_Norm": "Yellow",
+    "Max_Norm": "Yellow",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "Urinalysis_SpecificGravity",
+    "Test": "Urinalysis",
+    "Component": "Specific Gravity",
+    "Units": "",
+    "Min_Norm": 1.005,
+    "Max_Norm": 1.032,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "Urinalysis_pH",
+    "Test": "Urinalysis",
+    "Component": "pH",
+    "Units": "",
+    "Min_Norm": 4.6,
+    "Max_Norm": 8,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "Urinalysis_Blood",
+    "Test": "Urinalysis",
+    "Component": "Blood",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "Urinalysis_Protein",
+    "Test": "Urinalysis",
+    "Component": "Protein",
+    "Units": "mg/d",
+    "Min_Norm": 0,
+    "Max_Norm": 150,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "Urinalysis_Glucose",
+    "Test": "Urinalysis",
+    "Component": "Glucose",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "Urinalysis_Leukocyte",
+    "Test": "Urinalysis",
+    "Component": "Leukocyte Esterase",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "Urinalysis_Nitrites",
+    "Test": "Urinalysis",
+    "Component": "Nitrites",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "Urinalysis_Bilirubin",
+    "Test": "Urinalysis",
+    "Component": "Bilirubin",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "Urinalysis_Urobilinogen",
+    "Test": "Urinalysis",
+    "Component": "Urobilinogen",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "Urinalysis_WBCs",
+    "Test": "Urinalysis",
+    "Component": "WBCs",
+    "Units": "/hpf",
+    "Min_Norm": 0,
+    "Max_Norm": 5,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "Urinalysis_RBCs",
+    "Test": "Urinalysis",
+    "Component": "RBCs",
+    "Units": "/hpf",
+    "Min_Norm": 0,
+    "Max_Norm": 4,
+    "Type": "Quantitative"
+  },
+  {
+    "ColumnName": "UrineTox_UrineTox",
+    "Test": "Urine Toxicology",
+    "Component": "Urine Toxicology",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "UrineTox_Cocaine",
+    "Test": "Urine Toxicology",
+    "Component": "Cocaine",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "UrineTox_Amphetamines",
+    "Test": "Urine Toxicology",
+    "Component": "Amphetamines",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "UrineTox_Benzo",
+    "Test": "Urine Toxicology",
+    "Component": "Benzodiazepines",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "UrineTox_Barbiturates",
+    "Test": "Urine Toxicology",
+    "Component": "Barbiturates",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "UrineTox_Opiates",
+    "Test": "Urine Toxicology",
+    "Component": "Opiates",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "UrineTox_Marijuana",
+    "Test": "Urine Toxicology",
+    "Component": "Marijuana",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "UrineTox_PCP",
+    "Test": "Urine Toxicology",
+    "Component": "PCP",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "UrineCulture",
+    "Test": "Urine Culture",
+    "Component": "",
+    "Units": "",
+    "Min_Norm": "In Progress",
+    "Max_Norm": "In Progress",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "GC",
+    "Test": "GC (Gonorrhoeae/Chlamydia)",
+    "Component": "",
+    "Units": "",
+    "Min_Norm": "In Progress",
+    "Max_Norm": "In Progress",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "KOH",
+    "Test": "KOH wet prep",
+    "Component": "",
+    "Units": "",
+    "Min_Norm": "In Progress",
+    "Max_Norm": "In Progress",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "Influenza",
+    "Test": "Influenza",
+    "Component": "",
+    "Units": "",
+    "Min_Norm": "In Progress",
+    "Max_Norm": "In Progress",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "RSV",
+    "Test": "RSV",
+    "Component": "",
+    "Units": "",
+    "Min_Norm": "In Progress",
+    "Max_Norm": "In Progress",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "StrepScreen_Rapid",
+    "Test": "Strep Screen (Rapid + Culture)",
+    "Component": "Rapid Strep",
+    "Units": "",
+    "Min_Norm": "Negative",
+    "Max_Norm": "Negative",
+    "Type": "Qualitative"
+  },
+  {
+    "ColumnName": "StrepScreen_Culture",
+    "Test": "Strep Screen (Rapid + Culture)",
+    "Component": "Strep Culture",
+    "Units": "",
+    "Min_Norm": "In Progress",
+    "Max_Norm": "In Progress",
+    "Type": "Qualitative"
+  }
+]
