@@ -1,75 +1,53 @@
 // display lab options
-d3.json("data/labs.json").then(function (labsList) {
+d3.json("data/labs-setup.json").then(function (labsList) {
   // Get the modal
   var labsModal = document.getElementById("labs");
   var labsModalContent = labsModal.firstElementChild;
 
-  // add categories to modal
-  // console.log(labsList);
-  var labsCatList = [];
-  labsList.forEach(function(diagnosis) {
+  // add labs to modal
+  var labsTestList = [];
+  labsList.forEach(function(test) {
     // console.log(diagnosis);
-    if (!labsCatList.includes(diagnosis['Category'])) {
-      labsCatList.push(diagnosis['Category']);
+    if (!labsTestList.includes(test['Test'])) {
+      labsTestList.push(test['Test']);
     }
   });
-  // console.log(labsCatList);
+  // console.log(labsTestList);
   var labsModalCat = null;
-  labsCatList.forEach(function (category) {
-    // add collapsible list headers for each category
-    // add button
-    var labsCatBtn = document.createElement("button");
-    labsCatBtn.className = "collapsible";
-    labsCatBtn.setAttribute("type","button");
-    labsCatBtn.innerHTML = category;
-    labsModalContent.appendChild(labsCatBtn);
+  labsTestList.forEach(function (test) {
 
-    // add divs for buttons
-    var content = document.createElement("div");
-    content.className = "content";
-    content.style.display = "block";  // temp fix for collapsible buttons not working
-    labsModalContent.appendChild(content);
-    var row = document.createElement("div");
-    row.className = "row";
-    content.appendChild(row);
+    var labsTestBtn = document.createElement("button");
+    labsTestBtn.setAttribute("type","button");
+    labsTestBtn.innerHTML = test;
+    labsModalContent.appendChild(labsTestBtn);
 
     // add diagnosis buttons
     labsList.filter(function (item) {
-      if (item["Category"] == category) {
-        // console.log(item["Diagnosis"]);
-        var diagBtn = document.createElement("button");
-        diagBtn.className = "button-primary";
-        diagBtn.setAttribute("type","button");
-        diagBtn.setAttribute("id",item["Diagnosis"]);
-        diagBtn.innerHTML = item["Diagnosis"];
-        diagBtn.onclick = function() {
-          // add to labs section and summary statements
-          var labsDiv = document.getElementById("labs-list");
-          var labsDivItem = document.createElement("div");
-          labsDivItem.className = item["Diagnosis"];
-          labsDivItem.innerHTML = item["Category"]+": "+item["Diagnosis"]+"<span class='removelabs'>&times;</span>";
-          labsDiv.appendChild(labsDivItem);
+      if (item["Test"] == test) {
 
-          // remove labs on click
-          var removelabsBtns = document.getElementsByClassName('removelabs');
-          // console.log(removelabsBtns);
-          for (var i = 0; i < removelabsBtns.length; i++) {
-            removelabsBtns[i].onclick = function () {
-              var labs = this.parentNode;
-              labs.parentNode.removeChild(labs);
+        var labsDiv = document.getElementById("lab-results");
+        var labsDivItem = document.createElement("div");
+        labsDivItem.className = item["Test"];
+        labsDivItem.innerHTML = item["Test"]+"<span class='removelabs'>&times;</span>";
+        labsDiv.appendChild(labsDivItem);
 
-            };
+        // remove labs on click
+        var removelabsBtns = document.getElementsByClassName('removelabs');
+        // console.log(removelabsBtns);
+        for (var i = 0; i < removelabsBtns.length; i++) {
+          removelabsBtns[i].onclick = function () {
+            var labs = this.parentNode;
+            labs.parentNode.removeChild(labs);
+
           };
-
-          //close labs modal
-          labs.style.display = "none";
         };
 
-        row.appendChild(diagBtn);
-      }
-    });
+        //close labs modal
+        labs.style.display = "none";
+      };
 
-  })
+      })
+    });
 
   // Get the button that opens the modal
   var labsBtn = document.getElementById("labs-btn");
