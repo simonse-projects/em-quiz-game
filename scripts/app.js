@@ -308,7 +308,7 @@ function showCase(details) {
   });
 
   // When the user clicks on (x), close the modal
-  closeBtn[3].onclick = function() {
+  closeBtn[4].onclick = function() {
     dispositionModal.style.display = "none";
     form.reset();
     gradingDiv.style.display = "none";

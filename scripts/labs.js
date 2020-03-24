@@ -18,36 +18,23 @@ d3.json("data/labs-setup.json").then(function (labsList) {
 
     var labsTestBtn = document.createElement("button");
     labsTestBtn.setAttribute("type","button");
+    labsTestBtn.className = "button-primary";
     labsTestBtn.innerHTML = test;
     labsModalContent.appendChild(labsTestBtn);
 
-    // add diagnosis buttons
-    labsList.filter(function (item) {
-      if (item["Test"] == test) {
+    labsTestBtn.onclick = function() {
+      // add to labs section and summary statements
+      var labsDiv = document.getElementById("lab-results");
+      var labsDivItem = document.createElement("div");
+      console.log(test);
+      labsDivItem.className = test;
+      labsDivItem.innerHTML = test;
+      labsDiv.appendChild(labsDivItem);
 
-        var labsDiv = document.getElementById("lab-results");
-        var labsDivItem = document.createElement("div");
-        labsDivItem.className = item["Test"];
-        labsDivItem.innerHTML = item["Test"]+"<span class='removelabs'>&times;</span>";
-        labsDiv.appendChild(labsDivItem);
-
-        // remove labs on click
-        var removelabsBtns = document.getElementsByClassName('removelabs');
-        // console.log(removelabsBtns);
-        for (var i = 0; i < removelabsBtns.length; i++) {
-          removelabsBtns[i].onclick = function () {
-            var labs = this.parentNode;
-            labs.parentNode.removeChild(labs);
-
-          };
-        };
-
-        //close labs modal
-        labs.style.display = "none";
-      };
-
-      })
-    });
+      //close ddx modal
+      labsModal.style.display = "none";
+    };
+  });
 
   // Get the button that opens the modal
   var labsBtn = document.getElementById("labs-btn");
@@ -58,8 +45,8 @@ d3.json("data/labs-setup.json").then(function (labsList) {
   }
 
   // When the user clicks on (x), close the modal
-  // change from hard-coding [2] value - seems error-prone
-  closeBtn[4].onclick = function() {
+  // change from hard-coding value - seems error-prone
+  closeBtn[3].onclick = function() {
     // console.log("close");
     labsModal.style.display = "none";
   }
