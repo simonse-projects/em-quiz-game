@@ -26,9 +26,16 @@ d3.json("data/labs-setup.json").then(function (labsList) {
       // add to labs section and summary statements
       var labsDiv = document.getElementById("lab-results");
       var labsDivItem = document.createElement("div");
-      console.log(test);
       labsDivItem.className = test;
       labsDivItem.innerHTML = test;
+      var labComponents = [];
+
+      for (var lab in labsList) {
+        if (labsList[lab]["Test"] == test) {
+          labComponents.push(labsList[lab]);
+        }
+      }
+      console.log(labComponents);
       labsDiv.appendChild(labsDivItem);
 
       //close ddx modal

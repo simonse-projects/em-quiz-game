@@ -187,6 +187,11 @@ function showCase(details) {
     };
   });
 
+  // labs
+  d3.json("data/labs.json").then(function (labResults) {
+    console.log(labResults);
+  });
+
   var dispBtn = document.getElementById("disposition-btn");
   // Get the modal
   var dispositionModal = document.getElementById("disposition");
