@@ -120,6 +120,8 @@ function displayCases(cases) {
 } //end displayCases
 
 function showCase(details) {
+  // add case number as attribute
+  page3.setAttribute("case-number",details["CaseNumber"]);
 
   // empty MDM
   document.getElementById("MDM").value = "";
@@ -188,9 +190,11 @@ function showCase(details) {
   });
 
   // labs
-  d3.json("data/labs.json").then(function (labResults) {
-    console.log(labResults);
-  });
+  // d3.json("data/labs.json").then(function (labResults) {
+  //   console.log(labResults);
+  //   // get divs
+  //
+  // });
 
   var dispBtn = document.getElementById("disposition-btn");
   // Get the modal
