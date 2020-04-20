@@ -123,6 +123,9 @@ function showCase(details) {
   // add case number as attribute
   page3.setAttribute("case-number",details["CaseNumber"]);
 
+  // call labs function
+  labsDisplay(details);
+
   // empty MDM
   document.getElementById("MDM").value = "";
 
