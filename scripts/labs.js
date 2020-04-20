@@ -54,7 +54,30 @@ function labsDisplay(details) {
               // set lab value
               labValue.innerHTML = labResultsCase[labsList[lab]["ColumnName"]];
               // set normal range
-              
+              if (typeof(labsList[lab]["Min_Norm"]) == "number") {
+                if (labResultsCase[labsList[lab]["ColumnName"]] >= labsList[lab]["Min_Norm"] &&
+                      labResultsCase[labsList[lab]["ColumnName"]] <= labsList[lab]["Max_Norm"]) {
+
+                  labValue.className = "normal-value";
+
+                } else {
+                  labValue.className = "abnormal-value";
+                }
+              } else if (labsList[lab]["Type"] == "Qualitative") {
+                if (labResultsCase[labsList[lab]["ColumnName"]] == labsList[lab]["Min_Norm"]) {
+                  labValue.className = "normal-value";
+                } else {
+                  labValue.className = "abnormal-value";
+                }
+              } else if (typeof(labsList[lab]["Min_Norm"]) == "object") {
+                if (labResultsCase[labsList[lab]["ColumnName"]] >= labsList[lab]["Min_Norm"][details["Gender"]] &&
+                      labResultsCase[labsList[lab]["ColumnName"]] <= labsList[lab]["Max_Norm"][details["Gender"]]) {
+                  labValue.className = "normal-value";
+                } else {
+                  labValue.className = "abnormal-value";
+                }
+              }
+
               var labUnits = document.createElement("span");
               labUnits.innerHTML = " "+labsList[lab]["Units"];
               labComponentDiv.appendChild(labComponentLabel);
