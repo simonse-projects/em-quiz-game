@@ -33,9 +33,23 @@ d3.json("data/labs-setup.json").then(function (labsList) {
       for (var lab in labsList) {
         if (labsList[lab]["Test"] == test) {
           labComponents.push(labsList[lab]);
+
+          var labComponentDiv = document.createElement("div");
+          var labComponentLabel = document.createElement("span");
+          labComponentLabel.innerHTML = labsList[lab]["Component"]+": ";
+          var labValue = document.createElement("span");
+          var labUnits = document.createElement("span");
+          labUnits.innerHTML = " "+labsList[lab]["Units"];
+          labComponentDiv.appendChild(labComponentLabel);
+          labComponentDiv.appendChild(labValue);
+          labComponentDiv.appendChild(labUnits);
+
+          labsDivItem.appendChild(labComponentDiv);
+
         }
       }
       console.log(labComponents);
+
       labsDiv.appendChild(labsDivItem);
 
       //close ddx modal
