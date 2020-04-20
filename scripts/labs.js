@@ -27,7 +27,7 @@ d3.json("data/labs-setup.json").then(function (labsList) {
       var labsDiv = document.getElementById("lab-results");
       var labsDivItem = document.createElement("div");
       labsDivItem.className = test;
-      labsDivItem.innerHTML = test;
+      labsDivItem.innerHTML = "<b>"+test+"</b>";
       var labComponents = [];
 
       for (var lab in labsList) {
@@ -38,6 +38,7 @@ d3.json("data/labs-setup.json").then(function (labsList) {
           var labComponentLabel = document.createElement("span");
           labComponentLabel.innerHTML = labsList[lab]["Component"]+": ";
           var labValue = document.createElement("span");
+          labValue.setAttribute("id",labsList[lab]["Test"]+"-"+labsList[lab]["Component"]);
           var labUnits = document.createElement("span");
           labUnits.innerHTML = " "+labsList[lab]["Units"];
           labComponentDiv.appendChild(labComponentLabel);

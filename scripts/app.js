@@ -253,7 +253,8 @@ function showCase(details) {
 
     var hpiFinal = document.getElementById("HPI");
     var rosFinal = document.getElementById("ROS");
-    var peFinal = document.getElementById("PE")
+    var peFinal = document.getElementById("PE");
+    var labsFinal = document.getElementById("lab-results");
     var edCourseFinal = document.getElementById("ed-course");
     var mdmFinal = document.getElementById("MDM");
 
@@ -287,6 +288,7 @@ function showCase(details) {
     playerDiv.appendChild(labsBtn).textContent = "Labs / Imaging";
     var playerLabs = div.cloneNode();
     playerDiv.appendChild(playerLabs);
+    playerLabs.innerHTML = labsFinal.innerHTML;
 
     var ddxBtn = button.cloneNode();
     ddxBtn.className = "collapsible active";
