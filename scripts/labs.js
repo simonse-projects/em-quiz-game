@@ -85,12 +85,14 @@ function labsDisplay(details) {
               labComponentDiv.appendChild(labUnits);
 
               labsDivItem.appendChild(labComponentDiv);
-
             }
           }
           console.log(labComponents);
 
           labsDiv.appendChild(labsDivItem);
+
+          var br = document.createElement('br');
+          document.getElementById('ed-course').append("Performed "+this.innerHTML,br);
 
           //close ddx modal
           labsModal.style.display = "none";
